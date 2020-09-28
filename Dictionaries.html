@@ -624,7 +624,39 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="f56fd338-f9e0-490d-8274-71ff018c275a" class="page sans"><header><h1 class="page-title">Dictionaries</h1></header><div class="page-body"><ul id="e20c70c8-b347-4df3-b73c-28fe2278c1a7" class="bulleted-list"><li>Dictionaries allow you to connect pieces of information</li></ul><ul id="4307cca2-0e38-4c4b-b96b-938dd68d7bf8" class="bulleted-list"><li>Learn how to access the information and modify it </li></ul><ul id="80f4313a-f70f-4a47-a10b-c01e8c9bb752" class="bulleted-list"><li>Learn how to loop through the data </li></ul><ul id="a5a779ca-5bb2-48b0-baeb-35569dfca9ce" class="bulleted-list"><li>Learn how to nest dictionaries inside lists or other dictionaries</li></ul><h3 id="a9bde158-4980-417d-8022-a5eb22301bbc" class="">Simple Dictionary Declaration </h3><pre id="cf1972bf-cda5-467e-a95e-213f0332c467" class="code"><code>car_0 = {&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></pre><p id="57aef251-b9bf-4237-8da7-f4d30129d021" class="">
+</style>
+<link rel="stylesheet" href="./index.css">
+</head><body>
+	<!-- Starts Hamburger Menu -->
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div class="menu-items">
+          <ul>
+            <li><a href="./Introduction.html">Introduction</a></li>
+            <li><a href="./Python On Windows.html">Python On Windows</a></li>
+            <li><a href="./Variables And Data Types.html">Variables & Data Types</a></li>
+            <li><a href="./Conditionals.html">Conditionals</a></li>
+            <li><a href="./Dictionaries.html">Dictionaries</a></li>
+            <li><a href="./Lists.html">Lists</a></li>
+            <li><a href="./Loops.html">Loops</a></li>
+            <li><a href="./Operators.html">Operators</a></li>
+            <li><a href="./Modules.html">Modules</a></li>
+            <li><a href="./Strings.html">Strings</a></li>
+            <li><a href="./Tuple.html">Tuples</a></li>
+            <li><a href="./Functions.html">Functions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+
+<!-- Ends Hamburger Menu  -->
+	<article id="f56fd338-f9e0-490d-8274-71ff018c275a" class="page sans"><header><h1 class="page-title">Dictionaries</h1></header><div class="page-body"><ul id="e20c70c8-b347-4df3-b73c-28fe2278c1a7" class="bulleted-list"><li>Dictionaries allow you to connect pieces of information</li></ul><ul id="4307cca2-0e38-4c4b-b96b-938dd68d7bf8" class="bulleted-list"><li>Learn how to access the information and modify it </li></ul><ul id="80f4313a-f70f-4a47-a10b-c01e8c9bb752" class="bulleted-list"><li>Learn how to loop through the data </li></ul><ul id="a5a779ca-5bb2-48b0-baeb-35569dfca9ce" class="bulleted-list"><li>Learn how to nest dictionaries inside lists or other dictionaries</li></ul><h3 id="a9bde158-4980-417d-8022-a5eb22301bbc" class="">Simple Dictionary Declaration </h3><pre id="cf1972bf-cda5-467e-a95e-213f0332c467" class="code"><code>car_0 = {&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></pre><p id="57aef251-b9bf-4237-8da7-f4d30129d021" class="">
 </p><ul id="6096eb95-a1fb-4569-ba46-2add07253edf" class="bulleted-list"><li>A dictionary in Python is a collection of key-value pairs.</li></ul><ul id="947e5126-7b53-475b-b2e8-04b97aa84215" class="bulleted-list"><li>Each key is connected to a value</li></ul><ul id="4e12bbaa-bef6-441b-af29-3deb2ddf26a0" class="bulleted-list"><li>A key value can be a string a number or even another dictionary</li></ul><h3 id="29491e2d-3824-4154-9751-39cd73a6a986" class="">Accessing Values in a Dictionary</h3><ul id="e1b675c5-559c-45e7-ad99-84602f917a6e" class="bulleted-list"><li>In the code above we declared a simple car dictionary</li></ul><ul id="56869d15-316f-486c-ae2b-574a62ed12d8" class="bulleted-list"><li>To access the values, we just have to provide Python with the key </li></ul><pre id="54ec64c9-0f26-4b8c-8d31-f67ed6398bf6" class="code"><code>print(car_0[&#x27;color&#x27;])
 print(car_0[&#x27;brand&#x27;])
 print(&quot;I have a &quot; + car_0[&#x27;brand&#x27;] + &quot; car, and its color is &quot; + car_0[&#x27;color&#x27;])</code></pre><p id="bac023ad-b4b2-4411-b830-914852ff6871" class="">The output will be : </p><hr id="a1bfca33-4c0d-4151-a2e5-5f81d06560d4"/><p id="dbc14691-d5de-4bee-9b09-6ad13b702323" class=""><code>blue</code></p><p id="6ec0cbef-f270-450b-a4f5-257a1ce3440e" class=""><code>Mercedes</code></p><p id="837fb34e-64a5-4582-a4c6-5b1f95a9ba44" class=""><code>I have a Mercedes car, and its color is blue</code></p><hr id="809f7c3c-c9dc-4941-8c2e-d574c088bf78"/><h3 id="3dce6d68-3e90-4619-8daf-898c65f65857" class="">Adding New Key-Value Pairs</h3><p id="c0af18bd-84e6-45c4-ba5b-ea45abb16e6b" class="">

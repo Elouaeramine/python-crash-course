@@ -1,7 +1,7 @@
 /* CORE STYLES */
 :root {
-    --primary-color: rgba(13, 110, 139, 0.75);
-    --overlay-color: rgba(24, 39, 51 , 0.85);
+    --primary-color: rgba(174, 178, 179, 0.75);
+    --overlay-color: rgba(107, 113, 117, 0.85);
     --menu-speed: 0.75s;
   }
   
@@ -214,3 +214,20 @@
     text-decoration: none;
     transition: color 0.4s ease;
   }
+
+  .menu-items{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+   /* Hide scrollbar for Chrome, Safari and Opera */
+.menu-items::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.menu-items {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 

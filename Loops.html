@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Variables And Data Types</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Loops</title><style>
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -472,8 +472,7 @@ blockquote {
 
 .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
 
-.highlight-default {
-}
+
 .highlight-gray {
 	color: rgb(155,154,151);
 }
@@ -627,7 +626,6 @@ blockquote {
 </style>
 <link rel="stylesheet" href="./index.css">
 </head><body>
-	
 	<!-- Starts Hamburger Menu -->
 <div class="menu-wrap">
     <input type="checkbox" class="toggler">
@@ -657,38 +655,93 @@ blockquote {
     
 
 <!-- Ends Hamburger Menu  -->
-<article id="5a5d856e-0c93-4713-b739-1c1b5a405a08" class="page sans"><header><h1 class="page-title">Variables And Data Types</h1></header><div class="page-body"><ul id="45a82899-15eb-4f5a-9350-b14fe6b193ba" class="bulleted-list"><li>Variables are conntainers to store data.</li></ul><ul id="641fd25f-5fd4-4607-a5ae-af76549ab524" class="bulleted-list"><li>Python has no command to declare a variable. The variable is created whenever you assign a value to it</li></ul><ul id="52361add-c248-44bc-a140-481b0d6cde00" class="bulleted-list"><li>That means there is no type declaration , python automatically detects the right type of the variable.</li></ul><ul id="e2a41d27-5f44-4dac-9233-d3f23247875e" class="bulleted-list"><li>Variables can change type.</li></ul><h1 id="4556eb04-73c5-496a-9e10-d0441c8142e8" class="">Variable&#x27;s names</h1><ul id="53fcb7da-3226-43f7-865a-58c64a8296dc" class="bulleted-list"><li>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</li></ul><ul id="da1a4361-f032-4be2-9d35-5ac5a3973f8d" class="bulleted-list"><li>Rules for Python variables :</li></ul><ul id="420f864c-e2e5-4171-8649-6b40f73e2c6a" class="bulleted-list"><li> A variable name must start with a letter or the underscore character.</li></ul><ul id="38098aeb-bf87-4a28-8a08-e81c3df1b73c" class="bulleted-list"><li>A variable name cannot start with a number.</li></ul><ul id="180da301-f451-4747-8ecd-df12ff642294" class="bulleted-list"><li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).</li></ul><ul id="4a2c1eef-050d-4307-acf5-0bd5a261abe3" class="bulleted-list"><li>Variable names are case-sensitive (age, Age and AGE are three different variables).</li></ul><ul id="af225ec0-50fd-473a-9b1f-22213b816b38" class="bulleted-list"><li>Python allows you to do a multiple value assignement.</li></ul><h1 id="a7509e37-31b5-4cf4-89d1-db1b808c7fe8" class="">Output Variables </h1><ul id="70b4daec-cea7-4e98-a181-bef399b7e5f9" class="bulleted-list"><li>The ‘print’ statement allows us to output text / varibles .</li></ul><ul id="e85ff207-076f-414f-8134-af996f42d6e4" class="bulleted-list"><li>To print both text and variable , you use the + operator .</li></ul><ul id="556b6bf7-f5dc-4993-a917-c46c655d1537" class="bulleted-list"><li>For numbers , the + operator works as a mathematical operator.</li></ul><ul id="6998bd5a-7093-44fa-800d-047e8506520b" class="bulleted-list"><li>For Strings , the + operator concatinates the strings</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f38241cd-f782-4dce-8665-db341dfbdb01"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can’t combine both strings and numbers , it will give an error (you have to convert the number into a string first with the function str() ).</div></figure><h1 id="4fea4d8a-c111-4981-947f-9390ce5bb24c" class="">Data Types </h1><ul id="e306c73c-258e-4d72-9f67-452fb9531dad" class="bulleted-list"><li>Python has several built-in data types:</li></ul><p id="3c66b4a5-0f67-4348-b472-ce6b84925f2e" class=""> </p><ol id="d9ab89d7-4eb9-4e63-b93e-09599cbc728a" class="numbered-list" start="1"><li>Text : str()</li></ol><ol id="8be13cb5-8472-4b7f-a6f4-fda526209d76" class="numbered-list" start="2"><li>Numeric types : int , float , complex</li></ol><ol id="6d2c59dc-d0c4-4655-ad31-22ba6669f6c0" class="numbered-list" start="3"><li>Sequence type : list , tuple</li></ol><ol id="c3cbe3f3-0cca-4be5-8684-0c89e9c75efe" class="numbered-list" start="4"><li>Mapping type : dict</li></ol><ol id="0368f06a-2610-4f42-bcde-adea689fa99c" class="numbered-list" start="5"><li>Booleans : bool</li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26efbf2f-f77e-41d3-ad5e-cb00348cd87b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can always check the variable’s type by typing the commad : <strong>type(x)</strong></div></figure><h3 id="9860d58a-cd0d-4797-8f4d-bfcac730a317" class="">Type Casting</h3><ul id="79fb01c6-606c-478f-8bad-bc70ea324425" class="bulleted-list"><li>Casting is when you want to specify a type on a variable.</li></ul><ul id="14586888-be8e-4158-ba61-af8e3bd74230" class="bulleted-list"><li>Casting can be done with : int() , float() , str()</li></ul><h2 id="66848ae5-4a75-4f09-8f55-4562da5abb86" class="">Strings </h2><ul id="d92d0f7b-53ee-4be1-bb82-a17e3c5722bb" class="bulleted-list"><li>Strings in python are text surrounded by single or double quotation marks. </li></ul><pre id="37598f43-08de-4949-81c3-cf6193cb36a9" class="code"><code>&gt;&gt;&gt; &#x27;hello&#x27; == &quot;hello&quot;
-True</code></pre><ul id="426dcfed-a974-4416-90f5-9e1f2481badc" class="bulleted-list"><li>Strings can be displayed with the print() function or assigned to a variable.</li></ul><pre id="25de4d85-a008-4481-9093-c0b153e6415f" class="code"><code>&gt;&gt;&gt; ch = &#x27;Welcome&#x27;
-&gt;&gt;&gt; print(ch)
-&#x27;Welcome&#x27;</code></pre><ul id="b21e754e-bc98-4b1c-be78-f292fb090fd4" class="bulleted-list"><li>You can assign a multiline string by using 3 single or double quotation marks.</li></ul><pre id="ac34ebc5-0582-4daf-bdb3-adcdac20fdc2" class="code"><code>my_string = &#x27;&#x27;&#x27; This is 
-a multiline 
-text :)
- &#x27;&#x27;&#x27;</code></pre><ul id="f60f8e66-5300-489f-a556-bbac5504eac4" class="bulleted-list"><li>You can imagine strings as arrays of chars.</li></ul><ul id="d2a4ea4a-a3c8-4534-9cb3-78fa5a1b37a5" class="bulleted-list"><li>So you can access the i-th character by typing variable_name[i-1]</li></ul><pre id="c92a2ba5-4a84-46a9-aa92-51ad224a850d" class="code"><code>&gt;&gt;&gt; x = &#x27;Hello&#x27;
-&gt;&gt;&gt; print(x[1])
-&#x27;e&#x27;</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c9608f63-b292-420e-ac94-339f6601bec8"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Strings in Python are 0-indexed which means the first character has the index 0.</div></figure><p id="70fd45e0-bc39-4389-be8f-9c47829df1f3" class="">String length : To get the length of a string, use the len() function.</p><pre id="851dbb25-b7df-495b-9b58-5eeb280591fd" class="code"><code>&gt;&gt;&gt; x = &#x27;INSAT&#x27;
-&gt;&gt;&gt; len(x)
-5</code></pre><h2 id="a94357bf-ab74-481b-9c93-6367273ef4b3" class="">Slicing </h2><ul id="857d9d76-e486-4dea-b1cb-00277d523b09" class="bulleted-list"><li>Slicing is returning a range of characters</li></ul><ul id="2c716e43-df81-41e7-8cbb-0d5d8ee672d6" class="bulleted-list"><li>Slicing syntax is : a[start,end,step]</li></ul><pre id="96394042-2d1e-44d6-a2f6-f0fbbb3f931c" class="code"><code>&gt;&gt;&gt; x = &quot;welcome To python&quot;
-&gt;&gt;&gt; x[11:16]
-&#x27;python&#x27;</code></pre><h2 id="76e75928-8560-4913-8a18-1dae7539279a" class="">Negative indexing </h2><ul id="5ca0d7dd-9cc8-42bb-ad0f-4f556f2524a5" class="bulleted-list"><li>You can use negtive indexing to slice from the end of the string.</li></ul><pre id="047df9d0-87ad-4398-ac09-5a888464c596" class="code"><code>&gt;&gt;&gt; x = &#x27;INSAT is cool&#x27;
-&gt;&gt;&gt; x[-1]
-&#x27;l&#x27;
-&gt;&gt;&gt; x[-1:-4]
-&#x27;cool&#x27;</code></pre><h2 id="c0b2ed15-3f45-444a-bfe2-6f96a444a3e7" class="">Some string methods</h2><ul id="a8832fe8-d557-4a5c-a6f6-02116e78a8d4" class="bulleted-list"><li>Python has a set of built-in methods that you can use on strings.</li></ul><ul id="41e90ff3-4153-4e0b-8574-891d1a50701b" class="bulleted-list"><li>The strip() method removes any whitespace from the beginning or the end.</li></ul><ul id="62faf3a7-c5e4-431c-940f-ea00c034f346" class="bulleted-list"><li>The lower() method returns the string in lower case.</li></ul><ul id="42f9088b-46bb-43e6-a636-c8daf3273bc3" class="bulleted-list"><li>The upper() method returns the string in upper case.</li></ul><ul id="52f5f2cb-55ea-432a-9da6-cbadc5439942" class="bulleted-list"><li>The replace() method replaces a string with another string.</li></ul><ul id="21508262-1d45-43d2-82bf-96d0cb4d0914" class="bulleted-list"><li>The split() method splits the string into substrings if it finds instances of the separator</li></ul><ul id="7e445785-f7d8-4a42-b084-2e87e4bf978b" class="bulleted-list"><li>The find() method finds the first occurrence of the specified value and returns -1 if the value is not found.</li></ul><ul id="60c87251-5b95-48da-9ff5-a87441662bbc" class="bulleted-list"><li>The index() method finds the first occurrence of the specified value and raises an error if the value is not found.</li></ul><h3 id="afc4b387-bccb-42f6-9b40-ae75350e8b6d" class="">&#x27;in&#x27; and &#x27;not in&#x27;</h3><p id="b9e0246b-6181-4fc4-8951-9224900ca83e" class=""> </p><ul id="be9246b2-06c7-4808-bba3-749fd61e8170" class="bulleted-list"><li>To check if a certain phrase or character is present in a string</li></ul><pre id="66c725a6-95f1-490c-9cda-c1130a145fdf" class="code"><code>&gt;&gt;&gt; &#x27;a&#x27; in &#x27;insat&#x27;
-True
-&gt;&gt;&gt; &#x27;a&#x27; in &#x27;hello&#x27;
-False </code></pre><h3 id="8e989618-7e7f-403f-94c1-70deca1414db" class="">Concatination </h3><ul id="1f2db092-1849-484d-b05e-1a0b9f17df37" class="bulleted-list"><li>To concatenate, or combine, two strings you can use the + operator.</li></ul><ul id="de4c7676-0f2f-4e63-b577-a58b1ce19f56" class="bulleted-list"><li>But you can’t combine a string and a integer/float.</li></ul><ul id="aab4430c-b7aa-4ecb-8b2b-c44bf3057da8" class="bulleted-list"><li>Instead , you can cast the number into a string with the str() function or use format() method.</li></ul><ul id="370d2a9c-4711-4352-9af8-63a1793c2980" class="bulleted-list"><li>The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are.</li></ul><pre id="0d7877f3-e378-4eb9-9d37-3a524051a53d" class="code"><code>&gt;&gt;&gt; ch = &#x27;Hello&#x27;
-&gt;&gt;&gt; x = 5
-&gt;&gt;&gt; ch + x
-TypeError: can only concatenate str (not &quot;int&quot;) to str
-&gt;&gt;&gt; x = str(x)
-&gt;&gt;&gt; ch + x
-&#x27;Hello5&#x27;
-# or using the format method.
-&gt;&gt;&gt; ch = &#x27;Hello {}&#x27;
-&gt;&gt;&gt; x= 5
-&gt;&gt;&gt; ch.format(x)
-&#x27;Hello 5&#x27;</code></pre><h3 id="81d05b99-5899-4770-900c-7e09f506a852" class="">Escape Character </h3><ul id="844a068b-30a7-40de-bae0-5cafdc22733c" class="bulleted-list"><li>To insert characters that are illegal in a string, use an escape character.</li></ul><ul id="4f3e7f86-b32d-4165-b999-35bc373fb165" class="bulleted-list"><li>An escape character is a backslash \ followed by the character you want to insert.</li></ul><pre id="4dab0fea-5bd8-40e3-8951-8da207f10e9e" class="code"><code>&gt;&gt;&gt; &#x27;&#x27;helloo&#x27;&#x27;
-SyntaxError: invalid syntax
-&gt;&gt;&gt; &#x27;\&#x27;hello\&#x27;&#x27;
-&#x27;hello&#x27;</code></pre><p id="d9d13c00-8dc6-4db6-a601-57e4ffed2b8b" class="">
+	<article id="ac714c29-8bff-4cfa-b996-67de1575fb34" class="page sans"><header><h1 class="page-title">Loops</h1></header><div class="page-body"><h1 id="1cab3ad7-1bf1-4b5a-94d2-7f72bf00b4ff" class="">For loops</h1><ul id="f62b27b2-abaf-44f5-8c05-ac2e1ba29a5d" class="bulleted-list"><li>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</li></ul><pre id="41e80350-637a-4e03-9bd6-67c6548e8a83" class="code"><code>words= [&quot;Welcome&quot; , &quot;To&quot; , &quot;INSAT&quot;]
+for word in words :
+	print(word)
+#output is 
+# welcome
+# To
+# INSAT</code></pre><ul id="9e43db5d-0ca2-40f3-8160-851cd3580c5f" class="bulleted-list"><li>We can also loop through a string </li></ul><pre id="325af116-933a-4d45-b5ab-4fc5cff3f98e" class="code"><code>text = &#x27;Hello World!&#x27;
+for letter in text :
+	print(letter) 
+# H
+# e
+...</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bd46ff13-6c65-4417-ba4d-17b7e0c9e7fc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">The for loop works on itearbles (strings , lists , tuples , dicts , sets ... )</div></figure><h3 id="cedc2ad0-f02b-469c-b8d8-a46c2f98aa0a" class="">Break statetment </h3><ul id="5b7a32ee-f96f-47a9-a385-c67b93197a46" class="bulleted-list"><li>The break statement is used to stop the loop. It can be very useful with conditional statements.</li></ul><pre id="25935d79-c6a2-4cfb-a90b-a08518004737" class="code"><code>my_list = [1,2,3,4,5,6,7,8,9]
+for x in my_list :
+	if x % 3 == 0 :
+		break
+	print(x)	
+# ouput is 
+# 1
+# 2</code></pre><h3 id="d8094d8b-049c-4fc9-8763-0c4f9aad35c0" class="">Continue statement </h3><ul id="d18a2341-e3fe-4b8b-93df-c89fa5383e8c" class="bulleted-list"><li>With the continue statement we can stop the current iteration of the loop, and continue with the next. In an other way skip the current iteration.</li></ul><pre id="21203588-bb30-4791-9e98-cd0b564b45d5" class="code"><code>my_list = [1,2,3,4,5,6,7,8,9]
+for x in my_list :
+	if x == 4 :
+		continue 
+	print(x)
+# output is 
+#1
+#2
+#3
+#5
+#6
+#7
+#8
+#9</code></pre><h3 id="a7cff57b-419b-44f6-8c08-ff5f4dbe7904" class="">Range function </h3><ul id="3c64b1f0-ef1d-4b68-af84-f210c4004484" class="bulleted-list"><li>To loop through a set of code a specified number of times, we can use the range() function.</li></ul><ul id="144e6b3d-7aee-4c8a-9900-f21118506ead" class="bulleted-list"><li>The range function , by default , retunrs a sequence of numbers between 0 and n-1 , and increments by 1</li></ul><ul id="7a40c427-e815-46b3-b533-083c58091ffa" class="bulleted-list"><li>Syntax : range(start,end,step)</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4c639fdf-61ac-4646-8ff3-d81e736df276"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Like slicing , the start value is included and the end value is excluded</div></figure><pre id="f95758e0-cda8-4909-b55f-40e9af51bff0" class="code"><code>for x in range(6):
+	print(x)
+#output is 
+#0
+# 1
+# 2
+# 3
+# 4
+# 5</code></pre><h3 id="408fdde3-a431-4633-a44e-c547deb9bc6d" class="">Else keyword</h3><ul id="cf6bced6-3679-4a10-adf1-c2e5af9d84a7" class="bulleted-list"><li>The else keyword in a for loop specifies a block of code to be executed when the loop is finished.</li></ul><pre id="49a7e1db-3ba0-4648-8dfa-476ec330d13f" class="code"><code>for x in range(6):
+	print(x)
+else:
+	print(&#x27;Loop finished&#x27;)</code></pre><h3 id="4eab6917-5b78-4bbe-bff8-903212b57f9b" class="">Nested loops</h3><ul id="6bda37fa-f54d-4908-b5d2-642ac358b0a5" class="bulleted-list"><li>Nested loops are simply loops inside of a loop</li></ul><pre id="e145e43c-c298-48b6-8370-5f15abae6d90" class="code"><code>for i in range(5):
+	for j in range(5) :
+		print(i,j)
+</code></pre><h3 id="a1665179-b2ff-4ff0-b49f-ba9a35eb7ed9" class="">Pass statement</h3><ul id="c6eec362-d783-49a5-9e90-6233e7918b33" class="bulleted-list"><li>for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.</li></ul><pre id="84befe57-4606-4549-be8a-2883d726b537" class="code"><code>for x in range(3):
+	pass
+ </code></pre><h3 id="dcf190f8-a2cb-4b78-9e89-ca08fcb73122" class="">Lists and loops</h3><ul id="bee9ac79-ae5c-49be-907c-fc6cb7d8a631" class="bulleted-list"><li>There is a simple trick to create lists usings loops in fewer lines.</li></ul><pre id="ceb4465d-dddc-4c96-8c78-6b440dc3d0fa" class="code"><code> # create a list of squares by specifying the range
+squares = [x**2 for in range(10)]
+print(squares)
+# output is [0,1,4,9,...,81]
+numbers = [1,5,22,4,7,19,32,14]
+# create a list of numbers greater than 10
+my_list = [number for number in numbers if number &gt; 10]
+print(my_list)
+# [22,19,32,14]</code></pre><h1 id="9caf469b-74bb-4c37-8370-c89599b0d8be" class="">While loops</h1><ul id="fc709dc3-32a9-4e86-abfb-f2d15519c092" class="bulleted-list"><li>With the while loop we can execute a set of statements as long as a condition is true.</li></ul><pre id="b6377901-d9f7-44e8-b804-c35b2d79cfcb" class="code"><code>i = 0 
+while i &lt; 5 :
+	print(i)
+	i+=1
+#output is 
+# 0
+# 1
+# 2
+# 3 
+# 4</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="98ecbed0-6d77-4497-9e98-7c6592964731"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can see that I manually incremented the i variable. Otherwise the loop will continue forever.</div></figure><p id="da2e628a-a606-4e20-89c9-7ebb451214d5" class=""> </p><ul id="10dd91de-6dfd-46ed-a349-11efc23a3598" class="bulleted-list"><li>We need to define the indexing variable before starting the loop</li></ul><h3 id="f220a740-49fa-4346-9f10-6fb9502d9029" class="">Break statement </h3><ul id="8245aad9-76f5-4ba7-aa77-6568819fc619" class="bulleted-list"><li>Same in for loops , the break statement is used to stop the loop.</li></ul><pre id="530b8321-402c-4dd5-b314-efb39fc11682" class="code"><code>i = 1 
+while i &lt; 6:
+	print(i)
+	if i == 3 :
+		break
+	i+=1
+#output is 
+#1
+#2</code></pre><h3 id="6bf3ae04-b1a2-4243-9326-ae6377dbcf48" class="">Continue statement</h3><ul id="645e7eee-4808-4f69-94e1-adc86c49c3b0" class="bulleted-list"><li>The same thing in for loops , continue statement is used to skip the current iteration.</li></ul><pre id="cbbdcfd7-201f-4d78-8b86-ccbf7db7eaee" class="code"><code>i = 0 
+while i &lt;5 :
+	if i == 4 :
+		continue
+	print(i)
+	i+=1
+#output is 
+# 0
+# 1
+# 2
+# 3
+# 5</code></pre><h3 id="a952fd31-cf7f-4bbc-9777-1fb05c90244d" class="">Else statement </h3><ul id="f40c3857-5010-441d-9e46-edc17fd50a82" class="bulleted-list"><li>The else statement is executed when the loop finishes.</li></ul><pre id="dfaf0d01-c001-4a24-a7c1-55cc04b65aab" class="code"><code>i = 0
+while i&lt; 6 :
+	print(i)
+	i+=1
+else :
+	print(&quot;i = {} is no longer less than  6&quot;.format(i))</code></pre><p id="7634f350-b374-49ce-9fd9-27133984cbda" class="">
 </p></div></article></body></html>
