@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Dictionaries</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f56fd338-f9e0-490d-8274-71ff018c275a" class="page sans"><header><h1 class="page-title">Dictionaries</h1></header><div class="page-body"><ul id="e20c70c8-b347-4df3-b73c-28fe2278c1a7" class="bulleted-list"><li>Dictionaries allow you to connect pieces of information</li></ul><ul id="4307cca2-0e38-4c4b-b96b-938dd68d7bf8" class="bulleted-list"><li>Learn how to access the information and modify it </li></ul><ul id="80f4313a-f70f-4a47-a10b-c01e8c9bb752" class="bulleted-list"><li>Learn how to loop through the data </li></ul><ul id="a5a779ca-5bb2-48b0-baeb-35569dfca9ce" class="bulleted-list"><li>Learn how to nest dictionaries inside lists or other dictionaries</li></ul><h3 id="a9bde158-4980-417d-8022-a5eb22301bbc" class="">Simple Dictionary Declaration </h3><pre id="cf1972bf-cda5-467e-a95e-213f0332c467" class="code"><code>car_0 = {&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></pre><p id="57aef251-b9bf-4237-8da7-f4d30129d021" class="">
+</p><ul id="6096eb95-a1fb-4569-ba46-2add07253edf" class="bulleted-list"><li>A dictionary in Python is a collection of key-value pairs.</li></ul><ul id="947e5126-7b53-475b-b2e8-04b97aa84215" class="bulleted-list"><li>Each key is connected to a value</li></ul><ul id="4e12bbaa-bef6-441b-af29-3deb2ddf26a0" class="bulleted-list"><li>A key value can be a string a number or even another dictionary</li></ul><h3 id="29491e2d-3824-4154-9751-39cd73a6a986" class="">Accessing Values in a Dictionary</h3><ul id="e1b675c5-559c-45e7-ad99-84602f917a6e" class="bulleted-list"><li>In the code above we declared a simple car dictionary</li></ul><ul id="56869d15-316f-486c-ae2b-574a62ed12d8" class="bulleted-list"><li>To access the values, we just have to provide Python with the key </li></ul><pre id="54ec64c9-0f26-4b8c-8d31-f67ed6398bf6" class="code"><code>print(car_0[&#x27;color&#x27;])
+print(car_0[&#x27;brand&#x27;])
+print(&quot;I have a &quot; + car_0[&#x27;brand&#x27;] + &quot; car, and its color is &quot; + car_0[&#x27;color&#x27;])</code></pre><p id="bac023ad-b4b2-4411-b830-914852ff6871" class="">The output will be : </p><hr id="a1bfca33-4c0d-4151-a2e5-5f81d06560d4"/><p id="dbc14691-d5de-4bee-9b09-6ad13b702323" class=""><code>blue</code></p><p id="6ec0cbef-f270-450b-a4f5-257a1ce3440e" class=""><code>Mercedes</code></p><p id="837fb34e-64a5-4582-a4c6-5b1f95a9ba44" class=""><code>I have a Mercedes car, and its color is blue</code></p><hr id="809f7c3c-c9dc-4941-8c2e-d574c088bf78"/><h3 id="3dce6d68-3e90-4619-8daf-898c65f65857" class="">Adding New Key-Value Pairs</h3><p id="c0af18bd-84e6-45c4-ba5b-ea45abb16e6b" class="">
+</p><ul id="683ecb5b-6219-4505-80d0-d6460c4d9239" class="bulleted-list"><li>Dictionaries are dynamic data structures </li></ul><ul id="384ba2c0-4794-4993-a036-19b25570235f" class="bulleted-list"><li>You can add new key-value pairs at any time</li></ul><ul id="a6f68dc8-6af3-4c4a-9a37-8179e78d0113" class="bulleted-list"><li>Let&#x27;s add new information to our Car</li></ul><pre id="e7bfedc9-d9bb-426e-9bde-42a9fe2a1ffd" class="code"><code>print(car_0)
+car_0[&#x27;Mph&#x27;] = 90
+car_0[&#x27;price&#x27;] = 3000
+print(car_0)</code></pre><p id="6874a3d6-49af-485f-8a17-b0ac57a0c975" class="">The output will be :</p><hr id="7da1f1c9-2238-4309-9415-e0a58be0b5df"/><p id="e49aaeb7-79f1-443b-8569-2166fe303f97" class=""><code>{&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></p><p id="cfa70876-d265-41e0-83d4-fbf29188ca98" class=""><code>{&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27; , &#x27;Mph&#x27; : 90 , &#x27;price&#x27; : 3000}</code></p><hr id="d229b28d-b4d8-421b-a907-4ef4c720e80b"/><h3 id="9de645e9-c130-41c7-8252-e9c371cc84d9" class="">Modifying Values in a Dictionary </h3><ul id="8cf963ad-9b4b-4cee-9193-b94f4471b5bf" class="bulleted-list"><li>It&#x27;s very simple to modify values in a dictionary </li></ul><ul id="20a8f99e-4617-4d13-a25f-a633368afcbc" class="bulleted-list"><li>You just have to provide the key associated with the new value </li></ul><pre id="8e79eb7f-7311-487c-addd-2b992117c32f" class="code"><code>car_1 = {&#x27;color&#x27; : &#x27;green&#x27;}
+print(&quot;The color of my car is &quot; + car_1[&#x27;color&#x27;] + &quot;.&quot;)
+car_1[&#x27;color&#x27;] = &#x27;blue&#x27;
+print(&quot;The color of my car is now &quot;+ car_1[&#x27;color&#x27;] + &quot;.&quot;) </code></pre><p id="a380219a-7327-462a-aad8-f8380130daab" class="">The output of this code will be : </p><hr id="3fef0529-e1fa-4ef7-8c04-5991352d637b"/><p id="f8c27a19-23f6-462c-95e3-983fd6403014" class=""><code>The color of my car is green.</code></p><p id="77be0dc5-1c8d-4a6a-bc9c-0deedfeb769e" class=""><code>The color of my car is now blue.</code></p><hr id="9878a79f-98b6-4754-b810-d916cf4830ab"/><ul id="ef02c99b-e9a9-4646-8e4f-09ede7c1d054" class="bulleted-list"><li>For more interesting examples, let&#x27;s track the position of our car and make it run </li></ul><ul id="2f66cd7b-a19b-4f8b-9ab1-56a824218360" class="bulleted-list"><li>One way of doing this is to add new key-value pairs to our car dictionary </li></ul><pre id="2dcc670d-0936-4e30-97a7-f5cd5df55576" class="code"><code>car_1[&#x27;position&#x27;] = 0
+car_1[&#x27;speed&#x27;] = &#x27;medium&#x27;
+
+print(&quot;Original position : &quot;+ str(car_1[&#x27;position&#x27;]))
+# Determine how far we should move the car 
+if car_1[&#x27;speed&#x27;] == &#x27;slow&#x27;: 
+		increment = 1
+elif car_1[&#x27;speed&#x27;] == &#x27;medium&#x27;:
+		increment = 2
+else:
+		# this should be a fast car
+		increment = 3
+
+car_1[&#x27;position&#x27;] = car_1[&#x27;position&#x27;] + increment
+
+print(&quot;New position : &quot; + str(car_1[&#x27;position&#x27;]))</code></pre><p id="d1f15888-4f9c-47a9-bcf6-b4412990d67d" class="">
+</p><ul id="ba958375-a339-43eb-aab4-098a6978fcf1" class="bulleted-list"><li>This technique is pretty cool, by changing one value in the car dictionary we can change its overall behaviour</li></ul><pre id="87bd0844-dd3e-48ac-990d-c4f508fc7ff1" class="code"><code>car_1[&#x27;speed&#x27;] = &#x27;fast&#x27;</code></pre><ul id="77c921d8-06d8-4c1a-922e-55a18de0c5dc" class="bulleted-list"><li>Rerunning our code will assign a larger value to increment, therefore our car will run faster</li></ul><p id="807d4ea5-d425-450b-89f9-b2cf94123f03" class="">
+</p><h3 id="e2b77cee-a3c9-4d41-a9b9-452fbfbfa004" class="">Removing Key-Value Pairs</h3><ul id="bbf1187a-4c4c-4def-b504-4db7ffa28d37" class="bulleted-list"><li>When you no longer need a piece of information that&#x27;s stored in a dictionary,  you can delete it </li></ul><ul id="c67a0efa-a2b9-4420-9ffb-e47afc017eec" class="bulleted-list"><li>We delete a key-value pair using the del statement</li></ul><pre id="1fb5a061-439f-4ec7-ba2f-64c68448d9b5" class="code"><code>alien = {&#x27;color&#x27; : &#x27;green&#x27; , &#x27;planet&#x27; : &#x27;Mars&#x27;}
+print(alien)
+
+del alien[&#x27;planet&#x27;]
+print(alien)</code></pre><p id="4566b4e4-3f5b-433f-b2ce-70b3a4db4398" class="">
+</p><ul id="77df925e-e791-4538-9ecd-3e225c880ef2" class="bulleted-list"><li>The del statement tells Python to delete the key &#x27;planet&#x27; from the dictionary and the value associated with that key as well </li></ul><hr id="7fa0b7eb-0872-462b-bfcb-9702a8fa9305"/><p id="25c7f8e4-ac57-4bf2-92c5-92d92fa31318" class=""><code>{&#x27;color&#x27; : &#x27;green&#x27; , &#x27;planet&#x27; : &#x27;Mars&#x27;}</code></p><p id="dd773837-e2a0-47ae-bdee-7c29082b4f0c" class=""><code>{&#x27;color&#x27; : &#x27;green&#x27; }</code></p><hr id="cb1bfc2b-862e-4387-bd3b-8f2ffdd3fe4d"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="100ff7d2-0816-498e-b418-0b46c2368bf1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Be aware that the deleted key-value pair is removed permanently</div></figure><p id="9bfef029-e7f6-4cb9-9097-abcb55051f3a" class="">
+</p><h3 id="1de80361-4fcb-49a2-a7c4-c1f59aa0a22a" class="">Looping Through a Dictionary</h3><ul id="ab9556d7-ccff-4d52-8a06-fa17e1705717" class="bulleted-list"><li>Because a dictionary can contain large amounts of data, Python lets you loop through a dictionary</li></ul><ul id="56977d20-fcc6-49fd-90c9-6d668d1490f1" class="bulleted-list"><li>You can loop through all key-value pairs, through its keys or through its values </li></ul><ul id="3f96ed2f-2ae9-43df-99b8-accb459e8c1e" class="bulleted-list"><li>Let&#x27;s consider a new dictionary designed to store information about a user on a website </li></ul><pre id="d4a71271-b9ec-4abb-9589-ea7cdf565976" class="code"><code>user_0 = {
+	&#x27;username&#x27;: &#x27;cp3&#x27;,
+	&#x27;first_name&#x27; : &#x27;chris&#x27;,
+	&#x27;last_name&#x27; : &#x27;paul&#x27;
+}</code></pre><p id="c8a16015-3cab-465b-99b7-a7c3e0eb9f1b" class="">
+</p><ul id="d1af6dc8-6254-4662-9584-1b7316a885ec" class="bulleted-list"><li>You can access any single piece of information based on what we&#x27;ve already seen</li></ul><ul id="92e5fdfa-7f75-4290-a1c9-3b5d3e808167" class="bulleted-list"><li>If you wanted to see everything stored in this user dictionary </li></ul><pre id="3f8d6866-5c73-405a-a231-70717d9b64bb" class="code"><code>for key, value in user_0.items():
+		print(&quot;\nKey : &quot;+ key)
+		print(&quot;Value : &quot;+ value)</code></pre><p id="65080d9b-4e31-4a3f-adea-318b912af383" class="">The output of this code will be : </p><hr id="0144213d-cda3-401d-b3a9-c7035f8d5c47"/><p id="97c64c5e-3321-4307-b21f-62f21f9e269c" class=""><code>Key : username
+Value : cp3</code></p><p id="9f632f78-9f77-49ef-83d6-09bc600f256d" class=""><code>Key : first_name
+Value : chris</code></p><p id="6b533a2b-7bfb-4099-a996-3b54660b4fc2" class=""><code>Key : last_name
+Value : paul</code></p><hr id="83c969e5-72e6-43dd-9048-26490d74f298"/><ul id="ed5bcbf7-0d61-485c-9cc0-bc507b78c1e1" class="bulleted-list"><li>The key-value pairs that are not always returned in the order in which they were stored </li></ul><ul id="e9e9d49c-8a5f-4d69-a923-978854e96b96" class="bulleted-list"><li>Python doesn&#x27;t care about the order, it tracks only the connections between the keys and their values</li></ul><h3 id="3fc06ede-cf46-42ff-9c29-579e4e4cb10d" class="">Looping Through All The Keys in a Dictionary</h3><pre id="4631d1d0-f740-49c2-92d7-d44e8da71354" class="code"><code>favourite_languages = {
+		&#x27;jen&#x27; :&#x27;python&#x27;,
+		&#x27;sarah&#x27; : &#x27;c&#x27;,
+		&#x27;edward&#x27; : &#x27;java&#x27;
+}
+
+for name in favourite_languages.keys():
+		print(name.title())</code></pre><ul id="77f9ec4f-599c-4475-b550-ad3145bc61d9" class="bulleted-list"><li>The keys() method is useful when you don&#x27;t need to work with all the values in a dictionary</li></ul><ul id="b4725822-7fdb-4d8d-9533-8d74d277c565" class="bulleted-list"><li>The output of this file : </li></ul><hr id="368f9a7e-45e7-4ec6-a4c0-6dbf03589491"/><p id="e5e3c879-2c69-4716-9b55-37e3eb21ca46" class=""><code>Jen</code></p><p id="e8d2c081-f68b-4b9a-952e-d217fa594696" class=""><code>Sarah</code></p><p id="c3661e3f-1153-4079-97a4-dd5decfa8b4e" class=""><code>Edward</code></p><hr id="a5f81410-b503-4830-9c02-77d5a9d58c93"/><p id="0aab9369-dd3e-4c5e-b7fb-64e5efde5c40" class="">
+</p><h3 id="829dd28b-d2d8-46f0-be8b-a22c5daf351c" class="">Looping Through a Dictionary&#x27;s Keys in Order </h3><p id="17bbd167-103c-46cf-9167-999c1f1bb8c7" class="">
+</p><ul id="37e377ba-0066-464c-bb20-f95e9e07c4b6" class="bulleted-list"><li>As we mentioned earlier, we never get a predictable order when looping through a dictionary </li></ul><ul id="8cb13a69-a477-46a2-819a-f5a5bd8600e8" class="bulleted-list"><li>One way to return the items in a certain order is to sort the keys as they are returned in the for loop </li></ul><p id="776c13a5-2469-49db-89d5-eee625424341" class="">
+</p><pre id="f42e57a9-5035-48b9-86fd-5b968cd403fb" class="code"><code>for name in sorted (favourite_languages.keys()):
+		print(name.title() + &quot;, thank you for taking the poll.&quot;)</code></pre><p id="f984c7b8-631a-4d64-9036-f08f9ddc3cd5" class="">
+</p><p id="0e67520c-a522-4b34-92a3-950954f7bf1c" class="">
+</p><h3 id="2b4ade2f-850b-458d-b998-cc9d7b86bdb6" class="">Looping Through all The Values in a Dictionary</h3><p id="2eac4ff4-b90d-43e1-a983-506a163ada0a" class="">
+</p><ul id="f2a9b126-7d18-40e4-b16c-46a69ce57e70" class="bulleted-list"><li>You can use values() method to return a list of values without any keys</li></ul><pre id="fa1fa955-a010-44aa-ba33-8afa378575a9" class="code"><code>print(&quot;The following languages have been mentioned&quot;)
+for language in favourite_languages.values():
+		print(language.title())</code></pre><p id="2451dc7b-bfba-46e2-a497-4aec7029bc18" class="">
+</p><ul id="0cda6bb2-00f7-4a1b-8c9f-432f72966f3d" class="bulleted-list"><li>The for statement pulls each value from the dictionary and stores it in a variable language</li></ul><p id="219c6abd-8793-4d90-9b66-f4042f191966" class="">The output of this code will be : </p><hr id="4c0ca7e9-43f7-4be2-b22f-abcae09c77f5"/><p id="a734176a-cd9b-4f5d-9c67-f582d07f788d" class=""><code>The following languages have been mentioned</code></p><p id="07f1c7a7-e95a-4d56-af31-a8703b612965" class=""><code>Python</code></p><p id="90fc775d-7032-4621-a8c3-2cee3e1418e5" class=""><code>C</code></p><p id="1a482bbd-012b-4079-b79b-801b3457a261" class=""><code>Java</code></p><hr id="f89949b3-9e57-433b-88ef-9769894e60c7"/><ul id="57278f88-a7ac-4a06-996e-13858cf31c41" class="bulleted-list"><li>The problem with the previous code that we didn&#x27;t check for repeats</li></ul><ul id="d6d06b1e-eec1-4446-b7ea-34b705e01857" class="bulleted-list"><li>This might work fine with a small number of values </li></ul><ul id="5d44a79e-16b0-4fc4-ba31-c07c3e1e88df" class="bulleted-list"><li>In a large number of values, the result would be very repetitive</li></ul><pre id="751b9892-a34e-418d-b77d-16968a014416" class="code"><code>for language in set(favourite_languages.values()):
+		print(language.title())</code></pre><p id="0616f374-431a-4ba0-a3b0-47e5eec7e1c5" class="">
+</p></div></article></body></html>

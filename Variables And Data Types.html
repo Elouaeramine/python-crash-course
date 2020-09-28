@@ -1,0 +1,661 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Variables And Data Types</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5a5d856e-0c93-4713-b739-1c1b5a405a08" class="page sans"><header><h1 class="page-title">Variables And Data Types</h1></header><div class="page-body"><ul id="45a82899-15eb-4f5a-9350-b14fe6b193ba" class="bulleted-list"><li>Variables are conntainers to store data.</li></ul><ul id="641fd25f-5fd4-4607-a5ae-af76549ab524" class="bulleted-list"><li>Python has no command to declare a variable. The variable is created whenever you assign a value to it</li></ul><ul id="52361add-c248-44bc-a140-481b0d6cde00" class="bulleted-list"><li>That means there is no type declaration , python automatically detects the right type of the variable.</li></ul><ul id="e2a41d27-5f44-4dac-9233-d3f23247875e" class="bulleted-list"><li>Variables can change type.</li></ul><h1 id="4556eb04-73c5-496a-9e10-d0441c8142e8" class="">Variable&#x27;s names</h1><ul id="53fcb7da-3226-43f7-865a-58c64a8296dc" class="bulleted-list"><li>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</li></ul><ul id="da1a4361-f032-4be2-9d35-5ac5a3973f8d" class="bulleted-list"><li>Rules for Python variables :</li></ul><ul id="420f864c-e2e5-4171-8649-6b40f73e2c6a" class="bulleted-list"><li> A variable name must start with a letter or the underscore character.</li></ul><ul id="38098aeb-bf87-4a28-8a08-e81c3df1b73c" class="bulleted-list"><li>A variable name cannot start with a number.</li></ul><ul id="180da301-f451-4747-8ecd-df12ff642294" class="bulleted-list"><li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).</li></ul><ul id="4a2c1eef-050d-4307-acf5-0bd5a261abe3" class="bulleted-list"><li>Variable names are case-sensitive (age, Age and AGE are three different variables).</li></ul><ul id="af225ec0-50fd-473a-9b1f-22213b816b38" class="bulleted-list"><li>Python allows you to do a multiple value assignement.</li></ul><h1 id="a7509e37-31b5-4cf4-89d1-db1b808c7fe8" class="">Output Variables </h1><ul id="70b4daec-cea7-4e98-a181-bef399b7e5f9" class="bulleted-list"><li>The ‘print’ statement allows us to output text / varibles .</li></ul><ul id="e85ff207-076f-414f-8134-af996f42d6e4" class="bulleted-list"><li>To print both text and variable , you use the + operator .</li></ul><ul id="556b6bf7-f5dc-4993-a917-c46c655d1537" class="bulleted-list"><li>For numbers , the + operator works as a mathematical operator.</li></ul><ul id="6998bd5a-7093-44fa-800d-047e8506520b" class="bulleted-list"><li>For Strings , the + operator concatinates the strings</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f38241cd-f782-4dce-8665-db341dfbdb01"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can’t combine both strings and numbers , it will give an error (you have to convert the number into a string first with the function str() ).</div></figure><h1 id="4fea4d8a-c111-4981-947f-9390ce5bb24c" class="">Data Types </h1><ul id="e306c73c-258e-4d72-9f67-452fb9531dad" class="bulleted-list"><li>Python has several built-in data types:</li></ul><p id="3c66b4a5-0f67-4348-b472-ce6b84925f2e" class=""> </p><ol id="d9ab89d7-4eb9-4e63-b93e-09599cbc728a" class="numbered-list" start="1"><li>Text : str()</li></ol><ol id="8be13cb5-8472-4b7f-a6f4-fda526209d76" class="numbered-list" start="2"><li>Numeric types : int , float , complex</li></ol><ol id="6d2c59dc-d0c4-4655-ad31-22ba6669f6c0" class="numbered-list" start="3"><li>Sequence type : list , tuple</li></ol><ol id="c3cbe3f3-0cca-4be5-8684-0c89e9c75efe" class="numbered-list" start="4"><li>Mapping type : dict</li></ol><ol id="0368f06a-2610-4f42-bcde-adea689fa99c" class="numbered-list" start="5"><li>Booleans : bool</li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26efbf2f-f77e-41d3-ad5e-cb00348cd87b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can always check the variable’s type by typing the commad : <strong>type(x)</strong></div></figure><h3 id="9860d58a-cd0d-4797-8f4d-bfcac730a317" class="">Type Casting</h3><ul id="79fb01c6-606c-478f-8bad-bc70ea324425" class="bulleted-list"><li>Casting is when you want to specify a type on a variable.</li></ul><ul id="14586888-be8e-4158-ba61-af8e3bd74230" class="bulleted-list"><li>Casting can be done with : int() , float() , str()</li></ul><h2 id="66848ae5-4a75-4f09-8f55-4562da5abb86" class="">Strings </h2><ul id="d92d0f7b-53ee-4be1-bb82-a17e3c5722bb" class="bulleted-list"><li>Strings in python are text surrounded by single or double quotation marks. </li></ul><pre id="37598f43-08de-4949-81c3-cf6193cb36a9" class="code"><code>&gt;&gt;&gt; &#x27;hello&#x27; == &quot;hello&quot;
+True</code></pre><ul id="426dcfed-a974-4416-90f5-9e1f2481badc" class="bulleted-list"><li>Strings can be displayed with the print() function or assigned to a variable.</li></ul><pre id="25de4d85-a008-4481-9093-c0b153e6415f" class="code"><code>&gt;&gt;&gt; ch = &#x27;Welcome&#x27;
+&gt;&gt;&gt; print(ch)
+&#x27;Welcome&#x27;</code></pre><ul id="b21e754e-bc98-4b1c-be78-f292fb090fd4" class="bulleted-list"><li>You can assign a multiline string by using 3 single or double quotation marks.</li></ul><pre id="ac34ebc5-0582-4daf-bdb3-adcdac20fdc2" class="code"><code>my_string = &#x27;&#x27;&#x27; This is 
+a multiline 
+text :)
+ &#x27;&#x27;&#x27;</code></pre><ul id="f60f8e66-5300-489f-a556-bbac5504eac4" class="bulleted-list"><li>You can imagine strings as arrays of chars.</li></ul><ul id="d2a4ea4a-a3c8-4534-9cb3-78fa5a1b37a5" class="bulleted-list"><li>So you can access the i-th character by typing variable_name[i-1]</li></ul><pre id="c92a2ba5-4a84-46a9-aa92-51ad224a850d" class="code"><code>&gt;&gt;&gt; x = &#x27;Hello&#x27;
+&gt;&gt;&gt; print(x[1])
+&#x27;e&#x27;</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c9608f63-b292-420e-ac94-339f6601bec8"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Strings in Python are 0-indexed which means the first character has the index 0.</div></figure><p id="70fd45e0-bc39-4389-be8f-9c47829df1f3" class="">String length : To get the length of a string, use the len() function.</p><pre id="851dbb25-b7df-495b-9b58-5eeb280591fd" class="code"><code>&gt;&gt;&gt; x = &#x27;INSAT&#x27;
+&gt;&gt;&gt; len(x)
+5</code></pre><h2 id="a94357bf-ab74-481b-9c93-6367273ef4b3" class="">Slicing </h2><ul id="857d9d76-e486-4dea-b1cb-00277d523b09" class="bulleted-list"><li>Slicing is returning a range of characters</li></ul><ul id="2c716e43-df81-41e7-8cbb-0d5d8ee672d6" class="bulleted-list"><li>Slicing syntax is : a[start,end,step]</li></ul><pre id="96394042-2d1e-44d6-a2f6-f0fbbb3f931c" class="code"><code>&gt;&gt;&gt; x = &quot;welcome To python&quot;
+&gt;&gt;&gt; x[11:16]
+&#x27;python&#x27;</code></pre><h2 id="76e75928-8560-4913-8a18-1dae7539279a" class="">Negative indexing </h2><ul id="5ca0d7dd-9cc8-42bb-ad0f-4f556f2524a5" class="bulleted-list"><li>You can use negtive indexing to slice from the end of the string.</li></ul><pre id="047df9d0-87ad-4398-ac09-5a888464c596" class="code"><code>&gt;&gt;&gt; x = &#x27;INSAT is cool&#x27;
+&gt;&gt;&gt; x[-1]
+&#x27;l&#x27;
+&gt;&gt;&gt; x[-1:-4]
+&#x27;cool&#x27;</code></pre><h2 id="c0b2ed15-3f45-444a-bfe2-6f96a444a3e7" class="">Some string methods</h2><ul id="a8832fe8-d557-4a5c-a6f6-02116e78a8d4" class="bulleted-list"><li>Python has a set of built-in methods that you can use on strings.</li></ul><ul id="41e90ff3-4153-4e0b-8574-891d1a50701b" class="bulleted-list"><li>The strip() method removes any whitespace from the beginning or the end.</li></ul><ul id="62faf3a7-c5e4-431c-940f-ea00c034f346" class="bulleted-list"><li>The lower() method returns the string in lower case.</li></ul><ul id="42f9088b-46bb-43e6-a636-c8daf3273bc3" class="bulleted-list"><li>The upper() method returns the string in upper case.</li></ul><ul id="52f5f2cb-55ea-432a-9da6-cbadc5439942" class="bulleted-list"><li>The replace() method replaces a string with another string.</li></ul><ul id="21508262-1d45-43d2-82bf-96d0cb4d0914" class="bulleted-list"><li>The split() method splits the string into substrings if it finds instances of the separator</li></ul><ul id="7e445785-f7d8-4a42-b084-2e87e4bf978b" class="bulleted-list"><li>The find() method finds the first occurrence of the specified value and returns -1 if the value is not found.</li></ul><ul id="60c87251-5b95-48da-9ff5-a87441662bbc" class="bulleted-list"><li>The index() method finds the first occurrence of the specified value and raises an error if the value is not found.</li></ul><h3 id="afc4b387-bccb-42f6-9b40-ae75350e8b6d" class="">&#x27;in&#x27; and &#x27;not in&#x27;</h3><p id="b9e0246b-6181-4fc4-8951-9224900ca83e" class=""> </p><ul id="be9246b2-06c7-4808-bba3-749fd61e8170" class="bulleted-list"><li>To check if a certain phrase or character is present in a string</li></ul><pre id="66c725a6-95f1-490c-9cda-c1130a145fdf" class="code"><code>&gt;&gt;&gt; &#x27;a&#x27; in &#x27;insat&#x27;
+True
+&gt;&gt;&gt; &#x27;a&#x27; in &#x27;hello&#x27;
+False </code></pre><h3 id="8e989618-7e7f-403f-94c1-70deca1414db" class="">Concatination </h3><ul id="1f2db092-1849-484d-b05e-1a0b9f17df37" class="bulleted-list"><li>To concatenate, or combine, two strings you can use the + operator.</li></ul><ul id="de4c7676-0f2f-4e63-b577-a58b1ce19f56" class="bulleted-list"><li>But you can’t combine a string and a integer/float.</li></ul><ul id="aab4430c-b7aa-4ecb-8b2b-c44bf3057da8" class="bulleted-list"><li>Instead , you can cast the number into a string with the str() function or use format() method.</li></ul><ul id="370d2a9c-4711-4352-9af8-63a1793c2980" class="bulleted-list"><li>The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are.</li></ul><pre id="0d7877f3-e378-4eb9-9d37-3a524051a53d" class="code"><code>&gt;&gt;&gt; ch = &#x27;Hello&#x27;
+&gt;&gt;&gt; x = 5
+&gt;&gt;&gt; ch + x
+TypeError: can only concatenate str (not &quot;int&quot;) to str
+&gt;&gt;&gt; x = str(x)
+&gt;&gt;&gt; ch + x
+&#x27;Hello5&#x27;
+# or using the format method.
+&gt;&gt;&gt; ch = &#x27;Hello {}&#x27;
+&gt;&gt;&gt; x= 5
+&gt;&gt;&gt; ch.format(x)
+&#x27;Hello 5&#x27;</code></pre><h3 id="81d05b99-5899-4770-900c-7e09f506a852" class="">Escape Character </h3><ul id="844a068b-30a7-40de-bae0-5cafdc22733c" class="bulleted-list"><li>To insert characters that are illegal in a string, use an escape character.</li></ul><ul id="4f3e7f86-b32d-4165-b999-35bc373fb165" class="bulleted-list"><li>An escape character is a backslash \ followed by the character you want to insert.</li></ul><pre id="4dab0fea-5bd8-40e3-8951-8da207f10e9e" class="code"><code>&gt;&gt;&gt; &#x27;&#x27;helloo&#x27;&#x27;
+SyntaxError: invalid syntax
+&gt;&gt;&gt; &#x27;\&#x27;hello\&#x27;&#x27;
+&#x27;hello&#x27;</code></pre><p id="d9d13c00-8dc6-4db6-a601-57e4ffed2b8b" class="">
+</p></div></article></body></html>
