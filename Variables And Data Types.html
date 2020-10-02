@@ -23,7 +23,7 @@ body {
 
 body {
 	line-height: 1.5;
-	white-space: pre-wrap;
+	
 }
 
 a,
@@ -628,7 +628,7 @@ blockquote {
 <link rel="stylesheet" href="./index.css">
 </head><body>
 	
-	<!-- Starts Hamburger Menu -->
+<!-- Starts Burger Menu  -->
 <div class="menu-wrap">
     <input type="checkbox" class="toggler">
     <div class="hamburger"><div></div></div>
@@ -639,24 +639,24 @@ blockquote {
             <li><a href="./Introduction.html">Introduction</a></li>
             <li><a href="./Python On Windows.html">Python On Windows</a></li>
             <li><a href="./Variables And Data Types.html">Variables & Data Types</a></li>
-            <li><a href="./Conditionals.html">Conditionals</a></li>
-            <li><a href="./Dictionaries.html">Dictionaries</a></li>
-            <li><a href="./Lists.html">Lists</a></li>
-            <li><a href="./Loops.html">Loops</a></li>
             <li><a href="./Operators.html">Operators</a></li>
-            <li><a href="./Modules.html">Modules</a></li>
+            <li><a href="./Conditionals.html">Conditionals</a></li>
             <li><a href="./Strings.html">Strings</a></li>
+            <li><a href="./Loops.html">Loops</a></li>
+            <li><a href="./Lists.html">Lists</a></li>
             <li><a href="./Tuple.html">Tuples</a></li>
+            <li><a href="./Dictionaries.html">Dictionaries</a></li>
             <li><a href="./Functions.html">Functions</a></li>
+            <li><a href="./Modules.html">Modules</a></li>
+            <li><a href="./File Handling.html">File Handling </a></li>
           </ul>
         </div>
       </div>
     </div>
 
   </div>
-    
 
-<!-- Ends Hamburger Menu  -->
+  <!-- Ends Burger Menu -->
 <article id="5a5d856e-0c93-4713-b739-1c1b5a405a08" class="page sans"><header><h1 class="page-title">Variables And Data Types</h1></header><div class="page-body"><ul id="45a82899-15eb-4f5a-9350-b14fe6b193ba" class="bulleted-list"><li>Variables are conntainers to store data.</li></ul><ul id="641fd25f-5fd4-4607-a5ae-af76549ab524" class="bulleted-list"><li>Python has no command to declare a variable. The variable is created whenever you assign a value to it</li></ul><ul id="52361add-c248-44bc-a140-481b0d6cde00" class="bulleted-list"><li>That means there is no type declaration , python automatically detects the right type of the variable.</li></ul><ul id="e2a41d27-5f44-4dac-9233-d3f23247875e" class="bulleted-list"><li>Variables can change type.</li></ul><h1 id="4556eb04-73c5-496a-9e10-d0441c8142e8" class="">Variable&#x27;s names</h1><ul id="53fcb7da-3226-43f7-865a-58c64a8296dc" class="bulleted-list"><li>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</li></ul><ul id="da1a4361-f032-4be2-9d35-5ac5a3973f8d" class="bulleted-list"><li>Rules for Python variables :</li></ul><ul id="420f864c-e2e5-4171-8649-6b40f73e2c6a" class="bulleted-list"><li> A variable name must start with a letter or the underscore character.</li></ul><ul id="38098aeb-bf87-4a28-8a08-e81c3df1b73c" class="bulleted-list"><li>A variable name cannot start with a number.</li></ul><ul id="180da301-f451-4747-8ecd-df12ff642294" class="bulleted-list"><li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).</li></ul><ul id="4a2c1eef-050d-4307-acf5-0bd5a261abe3" class="bulleted-list"><li>Variable names are case-sensitive (age, Age and AGE are three different variables).</li></ul><ul id="af225ec0-50fd-473a-9b1f-22213b816b38" class="bulleted-list"><li>Python allows you to do a multiple value assignement.</li></ul><h1 id="a7509e37-31b5-4cf4-89d1-db1b808c7fe8" class="">Output Variables </h1><ul id="70b4daec-cea7-4e98-a181-bef399b7e5f9" class="bulleted-list"><li>The ‘print’ statement allows us to output text / varibles .</li></ul><ul id="e85ff207-076f-414f-8134-af996f42d6e4" class="bulleted-list"><li>To print both text and variable , you use the + operator .</li></ul><ul id="556b6bf7-f5dc-4993-a917-c46c655d1537" class="bulleted-list"><li>For numbers , the + operator works as a mathematical operator.</li></ul><ul id="6998bd5a-7093-44fa-800d-047e8506520b" class="bulleted-list"><li>For Strings , the + operator concatinates the strings</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f38241cd-f782-4dce-8665-db341dfbdb01"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can’t combine both strings and numbers , it will give an error (you have to convert the number into a string first with the function str() ).</div></figure><h1 id="4fea4d8a-c111-4981-947f-9390ce5bb24c" class="">Data Types </h1><ul id="e306c73c-258e-4d72-9f67-452fb9531dad" class="bulleted-list"><li>Python has several built-in data types:</li></ul><p id="3c66b4a5-0f67-4348-b472-ce6b84925f2e" class=""> </p><ol id="d9ab89d7-4eb9-4e63-b93e-09599cbc728a" class="numbered-list" start="1"><li>Text : str()</li></ol><ol id="8be13cb5-8472-4b7f-a6f4-fda526209d76" class="numbered-list" start="2"><li>Numeric types : int , float , complex</li></ol><ol id="6d2c59dc-d0c4-4655-ad31-22ba6669f6c0" class="numbered-list" start="3"><li>Sequence type : list , tuple</li></ol><ol id="c3cbe3f3-0cca-4be5-8684-0c89e9c75efe" class="numbered-list" start="4"><li>Mapping type : dict</li></ol><ol id="0368f06a-2610-4f42-bcde-adea689fa99c" class="numbered-list" start="5"><li>Booleans : bool</li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26efbf2f-f77e-41d3-ad5e-cb00348cd87b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">You can always check the variable’s type by typing the commad : <strong>type(x)</strong></div></figure><h3 id="9860d58a-cd0d-4797-8f4d-bfcac730a317" class="">Type Casting</h3><ul id="79fb01c6-606c-478f-8bad-bc70ea324425" class="bulleted-list"><li>Casting is when you want to specify a type on a variable.</li></ul><ul id="14586888-be8e-4158-ba61-af8e3bd74230" class="bulleted-list"><li>Casting can be done with : int() , float() , str()</li></ul><h2 id="66848ae5-4a75-4f09-8f55-4562da5abb86" class="">Strings </h2><ul id="d92d0f7b-53ee-4be1-bb82-a17e3c5722bb" class="bulleted-list"><li>Strings in python are text surrounded by single or double quotation marks. </li></ul><pre id="37598f43-08de-4949-81c3-cf6193cb36a9" class="code"><code>&gt;&gt;&gt; &#x27;hello&#x27; == &quot;hello&quot;
 True</code></pre><ul id="426dcfed-a974-4416-90f5-9e1f2481badc" class="bulleted-list"><li>Strings can be displayed with the print() function or assigned to a variable.</li></ul><pre id="25de4d85-a008-4481-9093-c0b153e6415f" class="code"><code>&gt;&gt;&gt; ch = &#x27;Welcome&#x27;
 &gt;&gt;&gt; print(ch)

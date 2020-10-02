@@ -15,6 +15,10 @@
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
   }
+
+  header {
+    margin-top: 80px;
+  }
   
   .container {
     max-width: 960px;
@@ -79,6 +83,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    
   }
   
   .menu-wrap .toggler {
@@ -90,6 +95,7 @@
     width: 50px;
     height: 50px;
     opacity: 0;
+    margin-bottom: 50px;
   }
   
   .menu-wrap .hamburger {
@@ -184,8 +190,8 @@
   .menu-wrap .menu > div {
     background: var(--overlay-color);
     border-radius: 50%;
-    width: 200vw;
-    height: 200vw;
+    width: 300vw;
+    height: 300vw;
     display: flex;
     flex: none;
     align-items: center;
@@ -208,6 +214,14 @@
     font-size: 1.5rem;
     padding: 1rem;
   }
+  
+  @media screen and (max-width: 500px)
+  {
+    .menu-wrap .menu > div > div > ul > li {
+      font-size: 3.5rem;
+    }
+  }
+
   
   .menu-wrap .menu > div > div > ul > li > a {
     color: inherit;

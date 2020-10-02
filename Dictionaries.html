@@ -627,35 +627,35 @@ blockquote {
 </style>
 <link rel="stylesheet" href="./index.css">
 </head><body>
-	<!-- Starts Hamburger Menu -->
-<div class="menu-wrap">
-    <input type="checkbox" class="toggler">
-    <div class="hamburger"><div></div></div>
-    <div class="menu">
-      <div>
-        <div class="menu-items">
-          <ul>
-            <li><a href="./Introduction.html">Introduction</a></li>
-            <li><a href="./Python On Windows.html">Python On Windows</a></li>
-            <li><a href="./Variables And Data Types.html">Variables & Data Types</a></li>
-            <li><a href="./Conditionals.html">Conditionals</a></li>
-            <li><a href="./Dictionaries.html">Dictionaries</a></li>
-            <li><a href="./Lists.html">Lists</a></li>
-            <li><a href="./Loops.html">Loops</a></li>
-            <li><a href="./Operators.html">Operators</a></li>
-            <li><a href="./Modules.html">Modules</a></li>
-            <li><a href="./Strings.html">Strings</a></li>
-            <li><a href="./Tuple.html">Tuples</a></li>
-            <li><a href="./Functions.html">Functions</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-    
-
-<!-- Ends Hamburger Menu  -->
+	<!-- Starts Burger Menu  -->
+	<div class="menu-wrap">
+		<input type="checkbox" class="toggler">
+		<div class="hamburger"><div></div></div>
+		<div class="menu">
+		  <div>
+			<div class="menu-items">
+			  <ul>
+				<li><a href="./Introduction.html">Introduction</a></li>
+				<li><a href="./Python On Windows.html">Python On Windows</a></li>
+				<li><a href="./Variables And Data Types.html">Variables & Data Types</a></li>
+				<li><a href="./Operators.html">Operators</a></li>
+				<li><a href="./Conditionals.html">Conditionals</a></li>
+				<li><a href="./Strings.html">Strings</a></li>
+				<li><a href="./Loops.html">Loops</a></li>
+				<li><a href="./Lists.html">Lists</a></li>
+				<li><a href="./Tuple.html">Tuples</a></li>
+				<li><a href="./Dictionaries.html">Dictionaries</a></li>
+				<li><a href="./Functions.html">Functions</a></li>
+				<li><a href="./Modules.html">Modules</a></li>
+				<li><a href="./File Handling.html">File Handling </a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	
+	  </div>
+	
+	  <!-- Ends Burger Menu -->
 	<article id="f56fd338-f9e0-490d-8274-71ff018c275a" class="page sans"><header><h1 class="page-title">Dictionaries</h1></header><div class="page-body"><ul id="e20c70c8-b347-4df3-b73c-28fe2278c1a7" class="bulleted-list"><li>Dictionaries allow you to connect pieces of information</li></ul><ul id="4307cca2-0e38-4c4b-b96b-938dd68d7bf8" class="bulleted-list"><li>Learn how to access the information and modify it </li></ul><ul id="80f4313a-f70f-4a47-a10b-c01e8c9bb752" class="bulleted-list"><li>Learn how to loop through the data </li></ul><ul id="a5a779ca-5bb2-48b0-baeb-35569dfca9ce" class="bulleted-list"><li>Learn how to nest dictionaries inside lists or other dictionaries</li></ul><h3 id="a9bde158-4980-417d-8022-a5eb22301bbc" class="">Simple Dictionary Declaration </h3><pre id="cf1972bf-cda5-467e-a95e-213f0332c467" class="code"><code>car_0 = {&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></pre><p id="57aef251-b9bf-4237-8da7-f4d30129d021" class="">
 </p><ul id="6096eb95-a1fb-4569-ba46-2add07253edf" class="bulleted-list"><li>A dictionary in Python is a collection of key-value pairs.</li></ul><ul id="947e5126-7b53-475b-b2e8-04b97aa84215" class="bulleted-list"><li>Each key is connected to a value</li></ul><ul id="4e12bbaa-bef6-441b-af29-3deb2ddf26a0" class="bulleted-list"><li>A key value can be a string a number or even another dictionary</li></ul><h3 id="29491e2d-3824-4154-9751-39cd73a6a986" class="">Accessing Values in a Dictionary</h3><ul id="e1b675c5-559c-45e7-ad99-84602f917a6e" class="bulleted-list"><li>In the code above we declared a simple car dictionary</li></ul><ul id="56869d15-316f-486c-ae2b-574a62ed12d8" class="bulleted-list"><li>To access the values, we just have to provide Python with the key </li></ul><pre id="54ec64c9-0f26-4b8c-8d31-f67ed6398bf6" class="code"><code>print(car_0[&#x27;color&#x27;])
 print(car_0[&#x27;brand&#x27;])
@@ -663,7 +663,8 @@ print(&quot;I have a &quot; + car_0[&#x27;brand&#x27;] + &quot; car, and its col
 </p><ul id="683ecb5b-6219-4505-80d0-d6460c4d9239" class="bulleted-list"><li>Dictionaries are dynamic data structures </li></ul><ul id="384ba2c0-4794-4993-a036-19b25570235f" class="bulleted-list"><li>You can add new key-value pairs at any time</li></ul><ul id="a6f68dc8-6af3-4c4a-9a37-8179e78d0113" class="bulleted-list"><li>Let&#x27;s add new information to our Car</li></ul><pre id="e7bfedc9-d9bb-426e-9bde-42a9fe2a1ffd" class="code"><code>print(car_0)
 car_0[&#x27;Mph&#x27;] = 90
 car_0[&#x27;price&#x27;] = 3000
-print(car_0)</code></pre><p id="6874a3d6-49af-485f-8a17-b0ac57a0c975" class="">The output will be :</p><hr id="7da1f1c9-2238-4309-9415-e0a58be0b5df"/><p id="e49aaeb7-79f1-443b-8569-2166fe303f97" class=""><code>{&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></p><p id="cfa70876-d265-41e0-83d4-fbf29188ca98" class=""><code>{&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27; , &#x27;Mph&#x27; : 90 , &#x27;price&#x27; : 3000}</code></p><hr id="d229b28d-b4d8-421b-a907-4ef4c720e80b"/><h3 id="9de645e9-c130-41c7-8252-e9c371cc84d9" class="">Modifying Values in a Dictionary </h3><ul id="8cf963ad-9b4b-4cee-9193-b94f4471b5bf" class="bulleted-list"><li>It&#x27;s very simple to modify values in a dictionary </li></ul><ul id="20a8f99e-4617-4d13-a25f-a633368afcbc" class="bulleted-list"><li>You just have to provide the key associated with the new value </li></ul><pre id="8e79eb7f-7311-487c-addd-2b992117c32f" class="code"><code>car_1 = {&#x27;color&#x27; : &#x27;green&#x27;}
+print(car_0)</code></pre><p id="6874a3d6-49af-485f-8a17-b0ac57a0c975" class="">The output will be :</p><hr id="7da1f1c9-2238-4309-9415-e0a58be0b5df"/><p id="e49aaeb7-79f1-443b-8569-2166fe303f97" class=""><code>
+	{&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27;}</code></p><p id="cfa70876-d265-41e0-83d4-fbf29188ca98" class=""><code>{&#x27;color&#x27; : &#x27;blue&#x27; , &#x27;brand&#x27; : &#x27;Mercedes&#x27; , &#x27;Mph&#x27; : 90 , &#x27;price&#x27; : 3000}</code></p><hr id="d229b28d-b4d8-421b-a907-4ef4c720e80b"/><h3 id="9de645e9-c130-41c7-8252-e9c371cc84d9" class="">Modifying Values in a Dictionary </h3><ul id="8cf963ad-9b4b-4cee-9193-b94f4471b5bf" class="bulleted-list"><li>It&#x27;s very simple to modify values in a dictionary </li></ul><ul id="20a8f99e-4617-4d13-a25f-a633368afcbc" class="bulleted-list"><li>You just have to provide the key associated with the new value </li></ul><pre id="8e79eb7f-7311-487c-addd-2b992117c32f" class="code"><code>car_1 = {&#x27;color&#x27; : &#x27;green&#x27;}
 print(&quot;The color of my car is &quot; + car_1[&#x27;color&#x27;] + &quot;.&quot;)
 car_1[&#x27;color&#x27;] = &#x27;blue&#x27;
 print(&quot;The color of my car is now &quot;+ car_1[&#x27;color&#x27;] + &quot;.&quot;) </code></pre><p id="a380219a-7327-462a-aad8-f8380130daab" class="">The output of this code will be : </p><hr id="3fef0529-e1fa-4ef7-8c04-5991352d637b"/><p id="f8c27a19-23f6-462c-95e3-983fd6403014" class=""><code>The color of my car is green.</code></p><p id="77be0dc5-1c8d-4a6a-bc9c-0deedfeb769e" class=""><code>The color of my car is now blue.</code></p><hr id="9878a79f-98b6-4754-b810-d916cf4830ab"/><ul id="ef02c99b-e9a9-4646-8e4f-09ede7c1d054" class="bulleted-list"><li>For more interesting examples, let&#x27;s track the position of our car and make it run </li></ul><ul id="2f66cd7b-a19b-4f8b-9ab1-56a824218360" class="bulleted-list"><li>One way of doing this is to add new key-value pairs to our car dictionary </li></ul><pre id="2dcc670d-0936-4e30-97a7-f5cd5df55576" class="code"><code>car_1[&#x27;position&#x27;] = 0

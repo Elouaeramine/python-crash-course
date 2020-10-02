@@ -23,7 +23,6 @@ body {
 
 body {
 	line-height: 1.5;
-	white-space: pre-wrap;
 }
 
 a,
@@ -628,7 +627,7 @@ blockquote {
 <link rel="stylesheet" href="./index.css">
 </head><body>
 	
-	<!-- Starts Hamburger Menu -->
+<!-- Starts Burger Menu  -->
 <div class="menu-wrap">
     <input type="checkbox" class="toggler">
     <div class="hamburger"><div></div></div>
@@ -639,24 +638,24 @@ blockquote {
             <li><a href="./Introduction.html">Introduction</a></li>
             <li><a href="./Python On Windows.html">Python On Windows</a></li>
             <li><a href="./Variables And Data Types.html">Variables & Data Types</a></li>
-            <li><a href="./Conditionals.html">Conditionals</a></li>
-            <li><a href="./Dictionaries.html">Dictionaries</a></li>
-            <li><a href="./Lists.html">Lists</a></li>
-            <li><a href="./Loops.html">Loops</a></li>
             <li><a href="./Operators.html">Operators</a></li>
-            <li><a href="./Modules.html">Modules</a></li>
+            <li><a href="./Conditionals.html">Conditionals</a></li>
             <li><a href="./Strings.html">Strings</a></li>
+            <li><a href="./Loops.html">Loops</a></li>
+            <li><a href="./Lists.html">Lists</a></li>
             <li><a href="./Tuple.html">Tuples</a></li>
+            <li><a href="./Dictionaries.html">Dictionaries</a></li>
             <li><a href="./Functions.html">Functions</a></li>
+            <li><a href="./Modules.html">Modules</a></li>
+            <li><a href="./File Handling.html">File Handling </a></li>
           </ul>
         </div>
       </div>
     </div>
 
   </div>
-    
 
-<!-- Ends Hamburger Menu  -->
+  <!-- Ends Burger Menu -->
 <article id="2609fd92-134c-4c34-a603-afee98c741f7" class="page sans"><header><h1 class="page-title">Modules</h1></header><div class="page-body"><p id="69cc6f9d-925d-46bf-afd1-d8adcdcac57f" class="">
 </p><h2 id="e9f49911-289d-48fc-9187-b3e09948f584" class="">Modules and Importing </h2><ul id="e6e8bbb3-bd6c-46dc-8d34-0445f7b6f019" class="bulleted-list"><li>A module is just a python file that contains a code you want to import into your program</li></ul><ul id="b938f7bf-a8fc-44cf-ad9c-a8f77cebcf9a" class="bulleted-list"><li>If you simply import the package, you can use the functions inside with module_name.function()</li></ul><h3 id="7b84748d-ccd9-477d-9037-5605d86f8abf" class="">Importing Specific functions</h3><p id="7f1b00d4-0310-4df4-b2b7-ff8f95be3e83" class="">from module_name import function_name </p><p id="5c155eb7-5b7e-4759-b65e-86678b39c1f2" class="">from module_name import function_one , function_two</p><pre id="bc77e7cd-42da-4c7e-8e0d-09ae75dbc40e" class="code"><code>from math import sin
 from random import randint , randrange</code></pre><h2 id="6829723b-c87e-4e9c-9a5b-7eca5e391da0" class="">Using as </h2><p id="43c320f6-d457-4653-aa63-726dc299832d" class="">You can import the function and change it&#x27;s name by using as </p><pre id="c368b3f9-acd2-4ed0-b296-2aa871e2360a" class="code"><code>from base64 import b64decode as decode</code></pre><p id="7d193c91-0675-4ebb-aafa-c7f1a26c0bda" class="">Or import module_name as m</p><pre id="e0ffbe66-832b-4bb6-b2a8-4d98d42afa19" class="code"><code>import numpy as np</code></pre><p id="1b28af6c-5bc8-403f-89f9-4738bbd11555" class="">and use the functions inside the module </p><pre id="e038eb7f-ca19-4f51-b806-e2bf04237528" class="code"><code>import numpy as np

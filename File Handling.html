@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Lists</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>File Handling</title><style>
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -23,6 +23,7 @@ body {
 
 body {
 	line-height: 1.5;
+	
 }
 
 a,
@@ -625,7 +626,9 @@ blockquote {
 	
 </style>
 <link rel="stylesheet" href="./index.css">
-</head><body>
+</head>
+<body>
+	
 <!-- Starts Burger Menu  -->
 <div class="menu-wrap">
     <input type="checkbox" class="toggler">
@@ -654,64 +657,17 @@ blockquote {
 
   </div>
 
-  <!-- Ends Burger Menu -->
-	<article id="bd694a46-55a5-47a2-a70d-84709c1afdb6" class="page sans"><header><h1 class="page-title">Lists</h1></header><div class="page-body"><ul id="ca778611-1046-455d-a0cb-d28cb087e003" class="bulleted-list"><li>List is a collection which is ordered and changeable and allows duplicate members.</li></ul><ul id="ad46011e-1c28-4119-98d9-4228edde2a26" class="bulleted-list"><li>Syntax : list_name = [values]</li></ul><ul id="2e5f48a1-bb85-4e2c-adae-31d07a4bc192" class="bulleted-list"><li>To access a specified element in the list , you can do it by referring the index number.</li></ul><pre id="6f0c7d1e-e0cc-4b8c-ac57-fe14afafc225" class="code"><code>my_list  = [&#x27;Welcome&#x27; , &#x27;To&#x27; , &#x27;INSAT&#x27;]
-my_list2 = list(&#x27;hello&#x27;)
-print(my_list[2]) 
-# output is &#x27;INSAT&#x27;
-print(mylist2)
-# output is [&#x27;h&#x27;,&#x27;e&#x27;,&#x27;l&#x27;,&#x27;l&#x27;,&#x27;o&#x27;]</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3e5645f7-7903-442b-839a-9db55236ecab"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Like Strings, Lists also are 0 - indexed.</div></figure><ul id="a62e15c4-520c-4771-b587-43aed7d55be8" class="bulleted-list"><li>Like strings , lists also allow the use of negative indexing </li></ul><pre id="0158791f-ff83-4609-83b9-e7d3b480999c" class="code"><code>&gt;&gt;&gt; my_list = [1,2,3,4,5,6,7,8,9]
-&gt;&gt;&gt; my_list[-1]
-9</code></pre><ul id="22993d3a-457c-40db-b1ea-c20aecef5ec7" class="bulleted-list"><li>You can refer to a range of values in your list by specifying where it starts and where it end.</li></ul><ul id="5e7d93b4-1483-4dfd-b13d-4d07825d09bd" class="bulleted-list"><li>Syntax  :  list_name[start:end:range]</li></ul><pre id="0aec1810-a1d3-4e88-8078-a396c14e5ebf" class="code"><code>&gt;&gt;&gt; my_list = [1,2,3,4,5,6,7,8,9]
-&gt;&gt;&gt; my_list[2:6]
-[3,4,5,6]</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="930ebc1f-1923-4ca4-9237-e66dceef0c3a"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">As you can notice, the start value is included and the end value is excluded.</div></figure><ul id="57505cba-4a67-4f35-9978-fc51d6246594" class="bulleted-list"><li>When you don’t specify the start value the range will be from the first element.</li></ul><ul id="36f711e1-d0f6-43c1-9510-74192d467eb9" class="bulleted-list"><li>When you don’t specify the end value the range will go on to the end of the list.</li></ul><pre id="f66a8b5b-9467-4d21-baa6-70ff8282edb8" class="code"><code>&gt;&gt;&gt; my_list = [1,2,3,4,5,6,7,8,9]
-&gt;&gt;&gt; my_list[:5]
-[1,2,3,4,5]
-&gt;&gt;&gt; my_list[3:]
-[4,5,6,7,8,9]</code></pre><ul id="0fa1cbd6-198a-41a2-8bf3-2b75ce3baffd" class="bulleted-list"><li>You can change it simply by specifying the index and the value.</li></ul><ul id="5068b1a8-759a-4a00-8b06-855392040a6b" class="bulleted-list"><li>the len() fuction returns the number of elements.</li></ul><h2 id="e3c6a658-2019-45b0-8146-26ebab1dbcee" class="">Some Methods for lists </h2><ul id="c77e167e-6305-482f-8db6-272d216925fc" class="bulleted-list"><li>Addiding an element to the end of the list : append()</li></ul><ul id="9eb77dd3-b313-4ca0-89f4-2bde67b67cc0" class="bulleted-list"><li>to reverse a list : list_name[::-1] , reverse()</li></ul><ul id="6db2ec76-aa42-4f1f-8b06-06e856376972" class="bulleted-list"><li>remove an element from the list : pop() / remove()</li></ul><ul id="35f08ffd-7251-4440-9883-3d64750f1c2f" class="bulleted-list"><li>to copy a list :  .copy() or new_list = my_list[:]</li></ul><ul id="fcead435-80ff-4863-9de6-4dad429b5d65" class="bulleted-list"><li>Sorting: The sort() methods sorts the array ascending by default.
-Syntax : list_name.sort(reverse = False , key= none)</li></ul><ul id="d6aedae8-62f8-4ccd-8c3e-36983ee4c251" class="bulleted-list"><li>The key is a function to specify the sorting criteria.</li></ul><pre id="b66dfb5e-c323-4987-9462-f53945a4bcfc" class="code"><code># adding an element
-&gt;&gt;&gt; my_list = [1,2,3,4]
-&gt;&gt;&gt; my_list.append(5)
-&gt;&gt;&gt; my_list
-[1,2,3,4,5]
-#reverse a list 
-&gt;&gt;&gt; my_list.reverse()
-&gt;&gt;&gt; my_list
-[5,4,3,2,1]
-&gt;&gt;&gt; my_list = [1,2,3,4,5]
-&gt;&gt;&gt; my_list[::-1]
-[5,4,3,2,1]
-# removing an element
-&gt;&gt;&gt; mylist.pop(0)
-1
-&gt;&gt;&gt; my_list
-[2,3,4,5]
-&gt;&gt;&gt; my_list.remove(4)
-&gt;&gt;&gt; my_list 
-[2,3,5]
-# copying a list
-&gt;&gt;&gt; my_list =[1,2,3,4,5]
-&gt;&gt;&gt; new_list = my_list.copy()
-&gt;&gt;&gt; new_list
-[1,2,3,4,5]
-&gt;&gt;&gt; new_list2 = my_list[:]
-&gt;&gt;&gt; new_list2 
-[1,2,3,4,5]
-# sorting 
-&gt;&gt;&gt; my_list = [4,5,1,8,3,2,7]
-&gt;&gt;&gt; my_list.sort()
-&gt;&gt;&gt; my_list 
-[1,2,3,4,5,7,8]
-&gt;&gt;&gt; my_list.sort(reverse = True)
-&gt;&gt;&gt; my_list
-[8,7,5,4,3,2,1]
-&gt;&gt;&gt; new_list = [&#x27;welcome&#x27;,&#x27;to&#x27;,&#x27;INSAT&#x27;]
-&gt;&gt;&gt; new_list.sort(key = len)
-&gt;&gt;&gt; new_list
-[&#x27;to&#x27;,&#x27;INSAT&#x27;,&#x27;welcome&#x27;]</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8e2745aa-f752-4c9c-88c0-884ce6aab7d1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Trying to copy a list by simply assigning it to a new variable isn&#x27;t copying because every modification that occurs on the new list will also occur on the intial list.</div></figure><pre id="26321918-a321-4482-950d-18bfc51333cb" class="code"><code>&gt;&gt;&gt; my_list = [1,2,3,4]
-&gt;&gt;&gt; new_list = my_list
-&gt;&gt;&gt; new_list.append(5)
-&gt;&gt;&gt; new_list
-[1,2,3,4,5]
-&gt;&gt;&gt; my_list
-[1,2,3,4,5]</code></pre></div></article></body></html>
+  <!-- Ends Burger Menu -->	
+<article id="298781c3-1ff9-4098-9a0c-fc0b5f8912d7" class="page sans"><header><h1 class="page-title">File Handling</h1></header><div class="page-body"><ul id="deaff9bd-ead8-4768-a331-40112f69725b" class="bulleted-list"><li>Python has several functions for creating, reading, updating, and deleting files.</li></ul><ul id="b5f6c32d-8e18-47f8-952e-45873d4c9e08" class="bulleted-list"><li>In order to open a file , we use the <code>open()</code> function which takes two parameters. The first one is filename and second one is the mode.</li></ul><ul id="f9cb9548-8978-4d42-b36d-320975925684" class="bulleted-list"><li>There are diffrent modes to open a file :<ol id="b9f9fe8f-ff83-4f62-9ea4-c5eab169ccc5" class="numbered-list" start="1"><li><code>&quot;r&quot;</code> : read which is the default value . returns an error if the file doesn&#x27;t exist.</li></ol><ol id="eb35a3a7-c3a4-446e-9f5b-bfbd85a286bd" class="numbered-list" start="2"><li><code>&quot;a&quot;</code> : append . Creates the file if it doesn&#x27;t exist.</li></ol><ol id="30e3f401-38b0-4496-b5f7-f3292123fcec" class="numbered-list" start="3"><li><code>&quot;w&quot;</code> : write . Creates the file if it doesn&#x27;t exist.</li></ol><ol id="39627d49-c4d4-4fcd-bea0-7dcfb430280d" class="numbered-list" start="4"><li><code>&quot;x&quot;</code>: create : create a file with the filename . returns an error if the file exists.</li></ol></li></ul><ul id="8ca74a5e-2ce4-4dd9-8073-3be38a38233c" class="bulleted-list"><li>In addition , you can specify how the file is handled:<ol id="67e94b6f-1064-43cf-bc42-e366dca3dc68" class="numbered-list" start="1"><li><code>&quot;t&quot;</code> : text mode : which is the default value</li></ol><ol id="71444ed8-6f2c-43dc-adf5-c478aebf1210" class="numbered-list" start="2"><li><code>&quot;b&quot;</code> : binary mode </li></ol></li></ul><ul id="6205552e-8c6d-47a4-aed8-0df6c262af5e" class="bulleted-list"><li>Syntax :</li></ul><pre id="5ec8b893-6c82-413e-b861-243937326bf8" class="code"><code>f = open(&#x27;my_file.txt&#x27;) 
+# this is equivalent to 
+f = open(&#x27;my_file.txt&#x27;,&#x27;rt&#x27;)
+</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e8ea9957-8ddf-4271-a315-a6cb7c8b5b7f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">If the file is located in another directory , you have to specify the full path for the file</div></figure><ul id="0714ff5f-ba64-4caa-ae16-92e9d31fbc75" class="bulleted-list"><li>After opening a file , We&#x27;re going to to read the content , so we can use the read() function.</li></ul><pre id="ae95bed3-fdd1-4520-b711-d13cd5796588" class="code"><code>f = open(&#x27;my_file.txt&#x27;)
+print(f.read())</code></pre><ul id="9a56a924-aab0-4ae9-a8f9-220096c20a84" class="bulleted-list"><li>You can read the file line by line with the function <code>readline()</code></li></ul><ul id="1e5927e8-3fac-40a6-a38c-e555febe19db" class="bulleted-list"><li>You can also do it with a for loop</li></ul><pre id="ebe74a07-c318-40a1-b1c5-3b85df11e3e1" class="code"><code>f = open(&#x27;my_file.txt&#x27;)
+for x in f :
+	print(x)</code></pre><ul id="6de00913-0d78-4a52-b871-6b3e8c3fdcce" class="bulleted-list"><li>After finishing with file manipulation , you should always close the file with the function <code>close()</code></li></ul><pre id="d253f15f-4d1a-4325-ba8f-e5eee326761a" class="code"><code>f = open(&#x27;my_file.txt&#x27;)
+for x in f :
+	print(x)
+f.close()</code></pre><h3 id="1d4cbfa5-55c3-4b53-a855-11c61b6d5248" class="">File writing </h3><ul id="98f80f3e-ebf7-448c-8537-19384e008bc9" class="bulleted-list"><li>To write in a file we use the write() function.</li></ul><pre id="43a332b2-d64b-4266-8103-fb3778d0eb5e" class="code"><code>f= open(&#x27;my_file2.txt&#x27;,&#x27;w&#x27;)
+f.write(&quot;This is a text.&quot;)
+f.close()</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f9de55fd-47d1-4f8d-bebd-366b01e8c92b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">The diffrence between &quot;w&quot; and &quot;a&quot; is that &quot;w&quot; mode overrides the file and the &quot;a&quot; mode writes to the end of the file.</div></figure><h3 id="110e88d5-8315-41fa-bd5b-424c888b765b" class="">With open statement </h3><ul id="c9b56000-36fd-4574-9518-5b90f3eef663" class="bulleted-list"><li>As most developers forget to close the file, the with open statement closes the file automatically after the end of manipulation of the file.</li></ul><pre id="931b857d-8e30-4226-9229-36863a61ceb8" class="code"><code>with open(&#x27;my_file.txt&#x27;) as f :
+		print(f.read())</code></pre><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8a895f3f-7c96-42dc-865c-04fb62f31733"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Don&#x27;t forget to indent</div></figure></div></article></body></html>
