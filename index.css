@@ -20,6 +20,31 @@
     margin-top: 80px;
   }
   
+
+  pre {
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    background: #f6f6f6;
+    border: 1px solid #ddd;
+    padding: .7em;
+    margin-top: 10px;
+    overflow: auto;
+    font-size: .974rem;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    tab-size: 4;
+    hyphens: none;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.explanation {
+  padding: 20px;
+  font-weight: bold;
+}
+
   .container {
     max-width: 960px;
     margin: auto;
@@ -245,3 +270,4 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 } 
+

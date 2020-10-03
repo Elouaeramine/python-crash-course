@@ -1,0 +1,741 @@
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>Python Quizz</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./quizz.css">
+	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- <script src="jquery-1.11.2.js"></script> -->
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+    <script type="text/javascript" src="./quizz.js"></script>
+</head>
+<body>
+<!-- Starts Burger Menu  -->
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div class="menu-items">
+          <ul>
+            <li><a href="./Introduction.html">Introduction</a></li>
+            <li><a href="./Python On Windows.html">Python On Windows</a></li>
+            <li><a href="./Variables And Data Types.html">Variables & Data Types</a></li>
+            <li><a href="./Operators.html">Operators</a></li>
+            <li><a href="./Conditionals.html">Conditionals</a></li>
+            <li><a href="./Strings.html">Strings</a></li>
+            <li><a href="./Loops.html">Loops</a></li>
+            <li><a href="./Lists.html">Lists</a></li>
+            <li><a href="./Tuple.html">Tuples</a></li>
+            <li><a href="./Dictionaries.html">Dictionaries</a></li>
+            <li><a href="./Functions.html">Functions</a></li>
+            <li><a href="./Modules.html">Modules</a></li>
+            <li><a href="./File Handling.html">File Handling </a></li>
+            <li><a href="./quizz.html">Python Quizz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ends Burger Menu -->	
+<div class="container">
+    <div class="inner">
+        
+        <h1>How much do you think you know about Python ?</h1>
+
+            <h2>What is the Output of the following code?</h2>
+            <div class="code">
+            <pre>
+              <code>for x in range(0.5, 5.5, 0.5): 
+    print(x)</code>
+            </pre>
+            </div>
+            <ul class="simpleList">
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">[0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5]</span>
+                </li>
+                
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">[0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]</span>
+                </li>
+                <li class="simpleListAnswer correct">
+						<span class="fa fa-square-o"></span>
+						<span class="simpleListText">The Program executed with errors</span>
+					</li>
+
+				</ul><!--end simpleList-->
+				
+				<div class="answerReveal">
+                    
+					<div class="quizzAnswerC">
+                        <div class="answerHeader">
+                            <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                            <div class="explanation">
+                                Explanation: <br>
+We cannot use the float numbers in range() function.
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerC-->
+                    
+                    <div class="quizzAnswerF">
+                        <div class="answerHeader">
+                            <h3 class="wrongMessage"><i class="fa fa-times-circle"></i>Sorry</h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="sorry">This is not the answer we were looking for...</p>	
+                            <div class="explanation">
+                                Explanation: <br>
+We cannot use the float numbers in range() function.
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerF-->
+				</div><!--end answerReveal-->
+                
+                <h2>What is The output of the following code ?</h2>
+                <pre><code>valueOne = 5 ** 2
+valueTwo = 5 ** 3
+print(valueOne)
+print(valueTwo)</code></pre>
+				<ul class="simpleList">
+                    <li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">10 <br> <span style="margin-left: 24px;"></span> 15</span>
+					</li>
+                    
+					<li class="simpleListAnswer correct">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">25 <br><span style="margin-left: 24px;"></span> 125</span>
+					</li>
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">150</span>
+					</li>
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">Error: invalid syntax</span>
+					</li>
+				</ul><!--end simpleList-->
+				
+				<div class="answerReveal">
+                    
+                    <div class="quizzAnswerC">
+                        <div class="answerHeader">
+                            <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                            <div class="explanation">
+                                Explanation: <br>
+Using two multiplication symbols, we can make a power relationship in Python. We call ** operator as an exponent operator. That is, in the expression 5 ** 3, 5 is being raised to the 3rd power.
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerC-->
+                    
+                    <div class="quizzAnswerF">
+                        <div class="answerHeader">
+                            <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="sorry">This is not the answer we were looking for...</p>	
+                            <div class="explanation">
+                                Explanation: <br>
+Using two multiplication symbols, we can make a power relationship in Python. We call ** operator as an exponent operator. That is, in the expression 5 ** 3, 5 is being raised to the 3rd power.
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerF-->
+				</div><!--end answerReveal-->
+                
+                <h2>What is the output of this code ?</h2>
+                <pre><code>for i in range(10, 15, 1):
+    print( i, end=', ')</code></pre>
+				<ul class="simpleList">
+                    <li class="simpleListAnswer correct">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">10, 11, 12, 13, 14,</span>
+					</li>
+                    
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">10, 11, 12, 13, 14, 15,</span>
+					</li>
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">11, 12, 13, 14, 15,</span>
+					</li>
+				</ul><!--end simpleList-->
+				
+				<div class="answerReveal">
+                    
+                    <div class="quizzAnswerC">
+                        <div class="answerHeader">
+                            <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                            <div class="explanation">Explanation: <br>
+                                Remember, the range doesn’t include a stop number in the output. Refer to Python range function                                
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerC-->
+                    
+                    <div class="quizzAnswerF">
+                        <div class="answerHeader">
+                            <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="sorry">This is not the answer we were looking for...</p>	
+                            <div class="explanation">Explanation: <br>
+Remember, the range doesn’t include a stop number in the output. Refer to Python range function                                
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerF-->
+				</div><!--end answerReveal-->
+				
+                <h2>What is the output of the following code ?</h2>
+                <pre><code>salary = 8000
+
+def printSalary():
+    salary = 12000
+    print("Salary:", salary)
+                      
+printSalary()
+print("Salary:", salary)</code></pre>
+				<ul class="simpleList">
+                    
+                    <li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">Salary: 8000 <br><span style="margin-left: 24px;"></span> Salary: 12000</span>
+					</li>
+                    
+					<li class="simpleListAnswer correct">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">Salary: 12000 <br><span style="margin-left: 24px;"></span> Salary: 8000</span>
+					</li>
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">Salary: 12000 <br><span style="margin-left: 24px;"></span> Salary: 12000</span>
+					</li>
+					<li class="simpleListAnswer ">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">The program failed with errors</span>
+					</li>
+				</ul><!--end simpleList-->
+				
+				<div class="answerReveal">
+                    
+                    <div class="quizzAnswerC">
+                        <div class="answerHeader">
+                            <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                            <div class="explanation">
+                                Explanation: <br>
+If you define a variable with the same name inside the scope of function as well at the global scope, then it will print the value given inside the function only and not the global value.
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerC-->
+                    
+                    <div class="quizzAnswerF">
+                        <div class="answerHeader">
+                            <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                        </div><!--end answer header-->
+                        <div class="answerText">
+                            <p id="sorry">This is not the answer we were looking for...</p>	
+                            <div class="explanation">
+                                Explanation: <br>
+If you define a variable with the same name inside the scope of function as well at the global scope, then it will print the value given inside the function only and not the global value.
+                            </div>
+                        </div><!--end asnwerText-->
+                    </div><!--end quizzAnswerF-->
+				</div><!--end answerReveal-->
+                
+                <h2>What is the output of the following code ?</h2>
+                <pre><code>str = "pynative"
+print (str[1:3])</code></pre>
+				<ul class="simpleList">
+                    
+                    <li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">py</span>
+					</li>
+                    
+					<li class="simpleListAnswer correct">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">yn</span>
+					</li>
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">pyn</span>
+					</li>
+					<li class="simpleListAnswer">
+                        <span class="fa fa-square-o"></span>
+						<span class="simpleListText">yna</span>
+					</li>
+				</ul><!--end simpleList-->
+				
+				<div class="answerReveal">
+                    
+                    <div class="quizzAnswerC">
+                        <div class="answerHeader">
+                            <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+					</div><!--end answer header-->
+					<div class="answerText">
+                        <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                        <div class="explanation">
+                            Explanation: <br>
+Remember, the index always starts at 0. Therefore, str [1 : 3] is “yn”
+                        </div>
+					</div><!--end asnwerText-->
+				</div><!--end quizzAnswerC-->
+                
+				<div class="quizzAnswerF">
+                    <div class="answerHeader">
+                        <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+					</div><!--end answer header-->
+					<div class="answerText">
+                        <p id="sorry">This is not the answer we were looking for...</p>	
+                        <div class="explanation">
+                            Explanation: <br>
+Remember, the index always starts at 0. Therefore, str [1 : 3] is “yn”
+                        </div>
+					</div><!--end asnwerText-->
+				</div><!--end quizzAnswerF-->
+            </div><!--end answerReveal-->	
+            <h2>What is the output of the following code ?</h2>
+            <pre><code>sampleList = ["Jon", "Kelly", "Jessa"]
+sampleList.append(2, "Scott")
+print(sampleList)</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer correct">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">The program executed with errors</span>
+                </li>
+                
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">[‘Jon’, ‘Kelly’, ‘Scott’, ‘Jessa’]</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">[‘Jon’, ‘Kelly’, ‘Jessa’, ‘Scott’]</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">[‘Jon’, ‘Scott’, ‘Kelly’, ‘Jessa’]</span>
+                </li>
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                    <div class="explanation">
+                        Explanation: <br>
+The append() method appends an item to the end of the list. SO we cannot pass the index number to it.
+                    </div>
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                    <div class="explanation">Explanation: <br>
+
+                        The append() method appends an item to the end of the list. SO we cannot pass the index number to it.
+                        </div>
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->	
+
+        <h2>Given the nested if-else below, what will be the value x when the code executed successfully</h2>
+            <pre><code>x = 0
+a = 5
+b = 5
+if a > 0:
+    if b < 0: 
+        x = x + 5 
+    elif a > 5:
+        x = x + 4
+    else:
+        x = x + 3
+else:
+    x = x + 2
+print(x)</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">0</span>
+                </li>
+                
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">4</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">2</span>
+                </li>
+                <li class="simpleListAnswer correct">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">3</span>
+                </li>
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->
+        
+        <h2> What is the output of the following if statement</h2>
+            <pre><code>a, b = 12, 5
+if a + b:
+    print('True')
+else:
+    print('False')</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">False</span>
+                </li>
+                
+                <li class="simpleListAnswer correct" >
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">True</span>
+                </li>
+
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                    <br>
+                </div><!--end asnwerText-->
+                <div class="explanation">
+                 Explanation: <br> In Python, any non-zero value is considered TRUE. So it will evaluate to true
+                </div>
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                    <div class="explanation">
+                        Explanation: <br> In Python, any non-zero value is considered TRUE. So it will evaluate to true
+                       </div>
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->
+
+        <h2>Select the correct output of the following String operations</h2>
+            <pre><code>str = "my name is James bond";
+print (str.capitalize())</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">My Name Is James Bond</span>
+                </li>
+                
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">TypeError: unsupported operand type(s) for * or pow(): ‘str’ and ‘int</span>
+                </li>
+                <li class="simpleListAnswer correct>
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">My name is james bond</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">MY NAME IS JAMES BOND</span>
+                </li>
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>
+                    <div class="explanation">
+                        Explanation: <br>
+                        The capitalize() function converts only the first character to capitalize a letter. And all remaining characters to lowercase.
+                    </div>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                    <div class="explanation">
+                        Explanation: <br>
+                        The capitalize() function converts only the first character to capitalize a letter. And all remaining characters to lowercase.
+                    </div>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->
+
+        <h2>Select the correct way to print Emma’s age.</h2>
+            <pre><code>student = {1: {'name': 'Emma', 'age':'27','sex': 'Female'},
+        2: {'name': 'Mike', 'age': '22', 'sex': 'Male'}}</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">student[0][1]</span>
+                </li>
+                
+                <li class="simpleListAnswer correct" >
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">student[1][“age”]</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">student[0][“age”]</span>
+                </li>
+
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->
+
+        <h2>What is the output of the following</h2>
+            <pre><code>sampleDict = dict([
+('first', 1),
+('second', 2),
+('third', 3)
+])
+print(sampleDict)</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">[ (‘first’, 100), (‘second’, 200), (‘third’, 300) ]    </span>
+                </li>
+                
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">Options: SyntaxError: invalid syntax</span>
+                </li>
+
+                <li class="simpleListAnswer correct">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">{‘first’: 1, ‘second’: 2, ‘third’: 3}</span>
+                </li>
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>
+                    <div class="explanation">
+                        Explanation: <br>
+We can create a Python dictionary by Specifying a list of tuples (comma-separated key: value pairs) enclosed in curly braces
+                    </div>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                    <div class="explanation">
+                        Explanation: <br>
+We can create a Python dictionary by Specifying a list of tuples (comma-separated key: value pairs) enclosed in curly braces
+                    </div>
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->
+        <h2>What is the output of the following displayPerson() function call</h2>
+            <pre><code>def displayPerson(*args):
+    for i in args:
+        print(i)
+            
+displayPerson(name="Emma", age="25")</code></pre>
+            <ul class="simpleList">
+                
+                <li class="simpleListAnswer correct ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">TypeError</span>
+                </li>
+                
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">Emma <br> <span style="margin-left: 24px;"></span> 25</span>
+                </li>
+
+                <li class="simpleListAnswer ">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText">name <br> <span style="margin-left: 24px;"></span>age</span>
+                </li>
+            </ul><!--end simpleList-->
+            
+            <div class="answerReveal">
+                
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="bravo">Your answer is correct on so many levels! Well done!</p>
+                    <div class="explanation">
+                        Explanation: <br>
+                        To accept Variable Length of Keyword Arguments, i.e., To create functions that take n number of Keyword arguments we use **kwargs(prefix a parameter name with a double asterisk ** ).
+                    </div>	
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerC-->
+            
+            <div class="quizzAnswerF">
+                <div class="answerHeader">
+                    <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+                </div><!--end answer header-->
+                <div class="answerText">
+                    <p id="sorry">This is not the answer we were looking for...</p>	
+                    <div class="explanation">
+                        Explanation: <br>
+                        To accept Variable Length of Keyword Arguments, i.e., To create functions that take n number of Keyword arguments we use **kwargs(prefix a parameter name with a double asterisk ** ).
+                    </div>
+                </div><!--end asnwerText-->
+            </div><!--end quizzAnswerF-->
+        </div><!--end answerReveal-->
+        <h2>What is the output of the following tuple operation</h2>
+        <pre><code>aTuple = (100,)
+print(aTuple * 2)</code></pre>
+        <ul class="simpleList">
+            
+            <li class="simpleListAnswer ">
+                <span class="fa fa-square-o"></span>
+                <span class="simpleListText">TypeError </span>
+            </li>
+            
+            <li class="simpleListAnswer correct">
+                <span class="fa fa-square-o"></span>
+                <span class="simpleListText">(100, 100)</span>
+            </li>
+
+            <li class="simpleListAnswer">
+                <span class="fa fa-square-o"></span>
+                <span class="simpleListText">(200)</span>
+            </li>
+        </ul><!--end simpleList-->
+        
+        <div class="answerReveal">
+            
+            <div class="quizzAnswerC">
+                <div class="answerHeader">
+                    <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Correct! </h3>
+            </div><!--end answer header-->
+            <div class="answerText">
+                <p id="bravo">Your answer is correct on so many levels! Well done!</p>
+                <div class="explanation">
+                    Explanation: <br>
+                    We can use * operator to repeat the tuple value n number of the item. <br>
+
+                    For example: <br>
+                    
+                    ("abc",)*3 will return ('abc', 'abc', 'abc')
+                </div>	
+            </div><!--end asnwerText-->
+        </div><!--end quizzAnswerC-->
+        
+        <div class="quizzAnswerF">
+            <div class="answerHeader">
+                <h3 class="wrongMessage"><i class="fa fa-times-circle  "></i>Sorry</h3>
+            </div><!--end answer header-->
+            <div class="answerText">
+                <p id="sorry">This is not the answer we were looking for...</p>	
+                <div class="explanation">
+                    Explanation: <br>
+                    We can use * operator to repeat the tuple value n number of the item. <br>
+
+                    For example: <br>
+                    
+                    ("abc",)*3 will return ('abc', 'abc', 'abc')
+                </div>
+            </div><!--end asnwerText-->
+        </div><!--end quizzAnswerF-->
+    </div><!--end answerReveal-->
+        
+            
+            
+			<div class="finalResult">
+                <h4>How much do you think you know about Python?</h4>
+                <div class="resultContainer"></div>
+                <div id="halfText"></div>
+                <div id="halfImage"> </div>
+			</div><!--end finalResult-->
+			
+		</div><!--end inner-->
+	</div><!--end container-->
+    
+</body>
